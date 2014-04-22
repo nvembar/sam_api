@@ -1,11 +1,9 @@
-Public Data Platform
+SAM API Documentation
 ====================
 
-This is the documentation repository for the Public Data Platform API. It is a separate effort from Qu, the software that powers this API. That documentation lives [here](http://cfpb.github.io/qu/).
+This is the documentation repository for the GSA SAM API. 
 
-Check out the [gh-pages view](https://github.cfpb.gov/pages/data-platform/public-data-platform.io/). 
-
-Thanks to the eregs team and their documentation work for starting us off with a great codebase.
+Thanks to CFPB team for creating this model and for furthering open source in government.  
 
 ## Using JavaScript and Bower
 
