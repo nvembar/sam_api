@@ -6,7 +6,7 @@ layout: default
 
 ### Overview
 
-...  
+The SAM API is a RESTful method of retrieving public information about the businesses or individuals (referred to as "entities") within the SAM data set. The information can currently be retrieved on an entity-by-entity basis. The next public release of the API will include search capabilities. The pilot API is available through api.data.gov at [http://api.data.gov/sam/registrations](http://api.data.gov/sam/registrations), but that API does not have the complete set of data elements. The version of the API referred to here is in test.
 
 ##### Get started
 If you find yourself overwhelmed, we organized this site into four major areas.
