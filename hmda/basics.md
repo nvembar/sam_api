@@ -13,9 +13,4 @@ The endpoint for getting all data begins with ```/registrations```.
 
 The endpoint takes a single URL parameter which is the DUNS and DUNS+4 information concatenated. If the entity does not have a DUNS+4, the user should include ```0000```. 
 
-##### Concepts
-Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible values. You can also specify concepts in any of the supported file formats like so: ```/data/{dataset-name}/{contept-name.extension}```. 
-
-<a href="console/#!/hmda/getConceptHmda_get_1" class="action-arrow">Try it out <i class="icon-right"> </i></a>
-
 <body id="basics"></body>
