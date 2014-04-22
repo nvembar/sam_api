@@ -5,9 +5,7 @@ nav: contribute
 ---
 ### Open source contributing
 
-Under the hood, HMDA data is stored and served by Qu, the [first government open-source project developed on GitHub](http://cfpb.github.io/qu/).
-
-The project is in the public domain, and we encourage you to [contribute to it on GitHub](http://github.com/cfpb/qu) by improving on it, [serving your own datasets](http://cfpb.github.io/qu/data_publishing.html), or making your own apps and tools using CFPB's data.
+The project is in the public domain, and we encourage you to [contribute to it on GitHub](https://github.com/GSA/sam_api).
 
 ##### Check out the repo
 
@@ -18,8 +16,8 @@ The project is in the public domain, and we encourage you to [contribute to it o
     </p>
   </li>
   <li>
-    <a href="https://github.com/cfpb/qu">
-      <h4>Qu</h4>
+    <a href="https://github.com/GSA/sam_api">
+      <h4>SAM API</h4>
       <p>The open source software that runs the platform</p>
     </a>
   </li>
