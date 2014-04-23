@@ -15,5 +15,5 @@ If you find yourself overwhelmed, we organized this site into four major areas.
 
 - [API basics](basics.html) introduces you to the operations offered by the API.
 - [API calls](console/) gives you a hands-on experience of those operations with an interactive console.
-- [Field reference](fields.html) lists and describes the type of information reported in the LAR.
+- [Field reference](fields.html) lists and describes the type of information provided by the API.
 
