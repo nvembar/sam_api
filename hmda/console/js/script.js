@@ -17,7 +17,7 @@ $(function() {
     var $body = $(this);
 
     var ajax = $.ajax({
-      url: "static/hmda_lar.json",
+      url: "static/sam_registrations.json",
       dataType: "json"
     });
 
