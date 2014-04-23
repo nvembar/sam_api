@@ -10,7 +10,7 @@
 																				    }
 		  ],
 				  "info": {
-						    "title": "SAM Registrations API",
+						    "title": "<h3>SAM Registrations API</h3>",
 								    "description": "<p>sam.gov is the System for Award Management. It is the site on which all vendors, grantees, receivers of federal financial assistance, and other entities doing business with the government must register.<p>The Registrations API currently provides a basic set of data about an entity's registration along with status and progress information for those registrations."
 											  }
 }
