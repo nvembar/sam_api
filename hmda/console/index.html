@@ -43,6 +43,7 @@
           console.log("Loaded SwaggerUI")
         }
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+        $onload = Docs.toggleEndpointListForResource('SAM Registrations');
       },
       onFailure: function(data) {
         if(console) {
