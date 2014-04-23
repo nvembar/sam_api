@@ -1,7 +1,7 @@
 {
 	  "apiVersion": "0.0.3",
 			  "swaggerVersion": "1.2",
-				  "basePath": "<%= ENV["SWAGGER_HOST"] || "http://localhost:3000" %>/sam_api/static/api_docs",
+				  "basePath": "http://gsa.github.io/sam_api/static/api_docs",
 					  "apis": [
 							    {
 										      "path": "/sam_swagger.json",
