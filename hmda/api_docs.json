@@ -1,7 +1,7 @@
 {
 	  "apiVersion": "0.0.3",
 			  "swaggerVersion": "1.2",
-				  "basePath": "<%= ENV["SWAGGER_HOST"] || "http://localhost:3000" %>/docs/sam-testing/api-docs",
+				  "basePath": "<%= ENV["SWAGGER_HOST"] || "http://localhost:3000" %>/sam_api/hmda/api-docs",
 					  "apis": [
 							    {
 										      "path": "/sam_swagger.json",
