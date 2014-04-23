@@ -8,11 +8,12 @@ layout: default
 
 The SAM API is a RESTful method of retrieving public information about the businesses or individuals (referred to as "entities") within the SAM data set. The information can currently be retrieved on an entity-by-entity basis. The next public release of the API will include search capabilities. The pilot API is available through api.data.gov at [http://api.data.gov/sam/registrations](http://api.data.gov/sam/registrations), but that API does not have the complete set of data elements. The version of the API referred to here is in test.
 
+In addition to the entity information, we also provide status and progress information. This is allowing us to build our SAM status "pizza tracker". The status refers to the status of the entity's registration - whether they are working on their registration, waiting for a validation from the IRS or the DoD (CAGE), or are active, for example. The progress is most relevant for those who are working on their registration; it indicates whether a user has finished filling out different sections of their registrations. This should indicate how far along in the process a user is in completing the work they need to do in order to successful be registered in SAM.
+
 ##### Get started
 If you find yourself overwhelmed, we organized this site into four major areas.
 
 - [API basics](basics.html) introduces you to the operations offered by the API.
 - [API calls](console/) gives you a hands-on experience of those operations with an interactive console.
-- [Query language](queries.html) contains a comprehensive listing of all the API's types, functions, and enumerations.
 - [Field reference](fields.html) lists and describes the type of information reported in the LAR.
 
