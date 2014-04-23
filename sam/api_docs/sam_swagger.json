@@ -1,7 +1,7 @@
 {
 	"apiVersion": "0.5.0",
 	"swaggerVersion": "1.2",
-	"basePath": "http://api.data.gov/sam",
+	"basePath": "https://gw.uat.sam.gov/SamStatus",
 	"resourcePath": "/registrations",
 	"produces": ["application/json"],
 	"apis": [{
@@ -34,11 +34,7 @@
 			},
 			{
 				"code": "403",
-				"message": "Request for IGT only registration data is forbidden"
-			},
-			{
-				"code": "403",
-				"message": "Request for non-public registration data is forbidden"
+				"message": "Request for registration information forbidden"
 			},
 			{
 				"code": "404",
@@ -190,15 +186,10 @@
 				},
 				"status": {
 					"type": "string",
-					"enum": ["DRAFT",
-					"WIP_TIN_MATCH_NOT_SUBMITTED",
-					"WIP_TIN_MATCH_SUBMITTED",
-					"SUBMITTED_TO_TIN_MATCH",
-					"SUBMITTED_TO_CAGE_VALIDATION",
+					"enum": [
 					"ACTIVE",
 					"EXPIRED",
-					"DELETED",
-					"STATUS_ERROR"],
+					"WIP"],
 					"required": true
 				},
 				"statusMessage": {
@@ -210,12 +201,6 @@
 						"type": "string"
 					},
 					"required": true
-				},
-				"naics": {
-					"type": "array",
-					"items": {
-						
-					}
 				},
 				"sbaCertificationExpirationDate": {
 					"type": "date"
@@ -344,84 +329,6 @@
 				"countryCode": {
 					"type": "string",
 					"required": true
-				}
-			}
-		},
-		"SamNaics": {
-			"description": "A representation of a NAICS code entry",
-			"type": "object",
-			"properties": {
-				"naicsCode": {
-					"type": "string",
-					"required": true
-				},
-				"naicsName": {
-					"type": "string"
-				},
-				"isPrimary": {
-					"type": "boolean"
-				},
-				"hasException": {
-					"type": "boolean"
-				},
-				"smallBusinessIndicator": {
-					"type": "string",
-					"enum": ["Y",
-					"N",
-					"E"]
-				},
-				"smallBusinessClassification": {
-					"type": "string",
-					"enum": ["A4",
-					"A6",
-					"JT",
-					"XX"]
-				},
-				"hasProtest": {
-					"type": "boolean"
-				}
-			}
-		},
-		"SamFarResponse": {
-			"description": "A representation of responses to FAR or DFAR certifications and qualifications",
-			"type": "object",
-			"properties": {
-				"id": {
-					"type": "string",
-					"required": true
-				},
-				"answers": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"answerId": {
-								"type": "string",
-								"required": true
-							},
-							"answer": {
-								"type": "object",
-								"oneOf": [{
-									"ref": "#/description/SamNaics"
-								},
-								{
-									"ref": "#/description/SamAddress"
-								},
-								{
-									"ref": "#/description/SamPointOfContact"
-								},
-								{
-									"type": "object",
-									"properties": {
-										"answerId": {
-											"type": "string",
-											"required": "true"
-										}
-									}
-								}]
-							}
-						}
-					}
 				}
 			}
 		}
