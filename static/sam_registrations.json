@@ -2,171 +2,213 @@
   "fields": {
     "duns": {
       "type": "string",
-      "description": "The 9-digit DUNS number of the awardee"
+      "description": "The 9-digit DUNS number of the awardee",
+			"could_be": "079338159"
     },
     "duns4": {
       "type": "string",
-      "description": "The 4-digit extension to the DUNS number indicating subcomponents of the entity"
+      "description": "The 4-digit extension to the DUNS number indicating subcomponents of the entity",
+			"could_be": "0000"
     },
     "cage": {
       "type": "string",
-      "description": "Commercial And Government Entity (CAGE) Code is a unique identifier assigned to an entity which provides a standardized method of identifying a given facility at a specific location. All US entities must meet a CAGE Code validation process, or will be assigned one by the Defense Logistics Information Service (DLIS). "
+      "description": "Commercial And Government Entity (CAGE) Code is a unique identifier assigned to an entity which provides a standardized method of identifying a given facility at a specific location. All US entities must meet a CAGE Code validation process, or will be assigned one by the Defense Logistics Information Service (DLIS). ",
+			"could_be": "1S5SY"
     },
     "ncage": {
       "type": "string",
-      "description": "CAGE Codes that are used internationally as part of the NATO Codification System (NCS) are called NCAGE codes.  All foreign entities must provide an NCAGE Code"
+      "description": "CAGE Codes that are used internationally as part of the NATO Codification System (NCS) are called NCAGE codes.  All foreign entities must provide an NCAGE Code",
+			"could_be": "2QL4Z"
     },
     "dodaac": {
       "type": "string",
-      "description": "The Department of Defense Activity Address Code (DODAAC) for non-civilian government agencies (DoD).  This is filled with the letters \"DOD\" followed by the agency's 6 digit DoDAAC number"
+      "description": "The Department of Defense Activity Address Code (DODAAC) for non-civilian government agencies (DoD).  This is filled with the letters \"DOD\" followed by the agency's 6 digit DoDAAC number",
+			"could_be": "F06003"
     },
     "purposeOfRegistration": {
       "type": "string",
-      "description": "Indicates whether the entity is seeking contracts, grants, or intergovernmental transfers"
+      "description": "Indicates whether the entity is seeking contracts, grants, or intergovernmental transfers. XXX Need table of codes XXX",
+			"could_be": "XXX Need codes XXX"
     },
     "registrationDate": {
       "type": "date",
-      "description": "The date the initial entity registration was submitted, this date will not change"
+      "description": "The date the initial entity registration was submitted, this date will not change. ISO-8601-formatted date",
+			"could_be": "2014-04-24T05:00:00.000"
     },
     "expirationDate": {
       "type": "date",
-      "description": "A system generated date for the date when the entity's registration expires.  Any time the user updates the company's information; this date needs to be updated to the current date."
+      "description": "A system generated date for the date when the entity's registration expires.  Any time the user updates the company's information; this date needs to be updated to the current date. ISO-8601-formatted date",
+			"could_be": "2014-04-24T05:00:00.000"
     },
     "activationDate": {
       "type": "date",
-      "description": "The date on which the entity's registration went active after all validations were completed."
+      "description": "The date on which the entity's registration went active after all validations were completed. ISO-8601-formatted date",
+			"could_be": "2014-04-24T05:00:00.000"
     },
     "lastUpdatedDate": {
       "type": "date",
-      "description": "The last date on which the entity's registration was updated."
+      "description": "The last date on which the entity's registration was updated. ISO-8601-formatted date",
+			"could_be": "2014-04-24T05:00:00.000"
     },
     "legalBusinessName": {
       "type": "string",
-      "description": "The legal business name of the entity."
+      "description": "The legal business name of the entity.",
+			"could_be": "APPLE COMPUTER INC"
     },
     "doingBusinessAsName": {
       "type": "string",
-      "description": "The Doing Business As (DBA) name of the entity provided by D&B monitoring"
+      "description": "The Doing Business As (DBA) name of the entity provided by D&B monitoring",
+			"could_be": "APPLE"
     },
     "companyDivision": {
       "type": "string",
-      "description": "This field is the Division Name as provided by the Entity"
+      "description": "This field is the Division Name as provided by the Entity",
+			"could_be": "Federal Division"
     },
     "divisionNumber": {
       "type": "string",
-      "description": "This field is the Division Number as provided by the Entity"
+      "description": "This field is the Division Number as provided by the Entity",
+			"could_be": "01"
     },
     "samAddress": {
       "type": "object",
-      "description": "The address provided by the entity for contact"
+      "description": "The address provided by the entity for contact",
+			"could_be": "XXX Show address XXX"
     },
     "congressionalDistrict": {
       "type": "string",
-      "description": "The Congressional District in which the entity resides, per their SAM address"
+      "description": "The Congressional District in which the entity resides, per their SAM address",
+			"could_be": "04"
     },
     "businessStartDate": {
       "type": "date",
-      "description": "The date the entity was started or acquired"
+      "description": "The date the entity was started or acquired. ISO-8601-formatted date",
+			"could_be": "2014-04-24T05:00:00.000"
     },
     "fiscalYearCloseDay": {
       "type": "string",
-      "description": "The day of the year in MMYY format that corresponds to the day on which the company's fiscal year closes"
+      "description": "The day of the year in MM/YY format that corresponds to the day on which the company's fiscal year closes",
+			"could_be": "09/30"
     },
     "corporateUrl": {
       "type": "string",
-      "description": "The URL provided by the entity for the corporation"
+      "description": "The URL provided by the entity for the corporation",
+			"could_be": "http://www.gsa.gov"
     },
     "corporateStructureCode": {
       "type": "string",
-      "description": "The structure of the entity as defined by the IRS as a code."
+      "description": "The structure of the entity as defined by the IRS as a code.",
+			"could_be": "XXX Need code XXX"
     },
     "corporateStructureDescription": {
       "type": "string",
-      "description": "The expanded description of the corporate structure"
+      "description": "The expanded description of the corporate structure",
+			"could_be": "Limited Liability Corporation"
     },
     "mailingAddress": {
       "type": "object",
-      "description": "The mailing address for the entity"
+      "description": "The mailing address for the entity",
+			"could_be": "XXX show address structure XXX"
     },
     "stateOfIncorporation": {
       "type": "string",
-      "description": "The US state in which the entity was incorporated, if applicable"
+      "description": "The US state in which the entity was incorporated, if applicable",
+			"could_be": "AZ"
     },
     "countryOfIncorporation": {
       "type": "string",
-      "description": "The country code where the entity was incorporated. This follows the ISO3166 3-digit format. SAM can also accommodate 2 character country codes"
+      "description": "The country code where the entity was incorporated. This follows the ISO3166 3-digit format. SAM can also accommodate 2 character country codes",
+			"could_be": "US"
     },
     "govtBusinessPoc": {
         "type": "object",
-        "description": "The point of contact for government business within the entity"
+        "description": "The point of contact for government business within the entity",
+				"could_be": "XXX POC Object XXX"
     },
     "altGovtBusinessPoc": {
         "type": "object",
-        "description": "The alternate point of contact for government business within the entity"
+        "description": "The alternate point of contact for government business within the entity",
+				"could_be": "XXX POC Object XXX"
     },
     "pastPerformancePoc": {
         "type": "object",
-        "description": "The point of contact for past performance information for business within the entity"
+        "description": "The point of contact for past performance information for business within the entity",
+				"could_be": "XXX POC Object XXX"
     },
     "altPastPerformancePoc": {
         "type": "object",
-        "description": "The alternate point of contact for past performance information for business within the entity"
+        "description": "The alternate point of contact for past performance information for business within the entity",
+				"could_be": "XXX POC Object XXX"
     },
     "electronicBusinessPoc": {
         "type": "object",
-        "description": "The point of contact for electronic business transactions within the entity"
+        "description": "The point of contact for electronic business transactions within the entity",
+				"could_be": "XXX POC Object XXX"
     },
     "altElectronicBusinessPoc": {
         "type": "object",
-        "description": "The alternate point of contact for electronic business transactions within the entity"
+        "description": "The alternate point of contact for electronic business transactions within the entity",
+				"could_be": "XXX POC Object XXX"
     },
     "creditCardUsage": {
       "type": "boolean",
-      "description": "Indicates whether an entity is willing to be paid by Government credit card"
+      "description": "Indicates whether an entity is willing to be paid by Government credit card",
+			"could_be": "true"
     },
     "hasDelinquentFederalDebt": {
       "type": "boolean",
-      "description": "The Delinquent Federal Debt (DFD) Certification (Flag) tracks status of an outstanding Delinquent Federal Debt owed by the registrant. This flag set to true indicates that the registrant has been determined to have a delinquent obligation owed to the U. S. Federal Government as shown by records at the Department of the Treasury. This flag set to false means the Treasury Department found no delinquent obligation. A non-entry [-] indicates that this registrant has not yet been verified with Treasury. Foreign registrations are not verified."
+      "description": "The Delinquent Federal Debt (DFD) Certification (Flag) tracks status of an outstanding Delinquent Federal Debt owed by the registrant. This flag set to true indicates that the registrant has been determined to have a delinquent obligation owed to the U. S. Federal Government as shown by records at the Department of the Treasury. This flag set to false means the Treasury Department found no delinquent obligation. A non-entry [-] indicates that this registrant has not yet been verified with Treasury. Foreign registrations are not verified.",
+			"could_be": "false"
     },
     "hasKnownExclusion": {
       "type": "boolean",
-      "description": "This flag indicates whether an entity has an exclusion record"
+      "description": "This flag indicates whether an entity has an exclusion record",
+			"could_be": "true"
     },
     "correspondenceFlag": {
       "type": "string",
-      "description": "This field is used to identify an entity's preferred correspondence type. 'M' indicates US Mail', 'F' indicates fax, 'E' indicates email"
+      "description": "This field is used to identify an entity's preferred correspondence type. 'M' indicates US Mail', 'F' indicates fax, 'E' indicates email",
+			"could_be": "M"
     },
     "status": {
       "type": "string",
-      "description": "The status of the entity's registration"
+      "description": "The status of the entity's registration",
+			"could_be": "ACTIVE"
     },
     "statusMessage": {
       "type": "string",
-      "description": "The text description of the status of the entity's registration"
+      "description": "The text description of the status of the entity's registration",
+			"could_be": "Work in Progress"
     },
     "businessTypes": {
       "type": "array",
-      "description": "An array of business types determined by SBA or Ability One"
+      "description": "An array of business types determined by SBA or Ability One",
+			"could_be": "[\"ZZ\", \"2R\"]"
     },
     "sbaCertificationExpirationDate": {
       "type": "date",
-      "description": "The date on which an entity's SBA certification expires"
+      "description": "The date on which an entity's SBA certification expires",
+			"could_be": "2014-04-24T05:00:00.000"
     },
     "disasterRelief": {
       "type": "array",
-      "description": "An array which describes the disaster relief locations which can be serviced by the entity."
+      "description": "An array which describes the disaster relief locations which can be serviced by the entity.",
+			"could_be": "XXX need this XXX"
     },
     "pscCodes": {
       "type": "array",
-      "description": "The Product Service Codes, described by objects, which the entity supports"
+      "description": "The Product Service Codes, described by objects, which the entity supports",
+			"could_be": "XXX Need this XXX"
     },
     "certifications": {
       "type": "object",
-      "description": "An object wrapping a URL linking to a PDF of certification data"
+      "description": "An object wrapping a URL linking to a PDF of certification data",
+			"could_be": "http://www.sam.gov/fileDownload?report_type=1&daetqgdahjdhafjdkjakjb"
     },
     "qualifications": {
       "type": "object",
-      "description": "An object wrapping a URL linking to a PDF of qualifications data"
+      "description": "An object wrapping a URL linking to a PDF of qualifications data",
+			"could_be": "http://www.sam.gov/fileDownload?report_type=2&daetqgdahjdhafjdkjakjb"
     }
   }
 }

@@ -30,9 +30,10 @@ $(function() {
         var $row = $("<tr></tr>");
         $row.
           append("<td><code>" + fieldName + "</code></td>").
-          append("<td>" + info['description'] + "</td>").
-          append("<td>" + info['type'] + "</td>").
-          append("<td>" + (info['indexed'] ? "true" : "false") + "</td>");
+          append("<td>" + info['description'] + "<p><p><em>Could be: </em><code>" + info['could_be'] + "</code></td>").
+          append("<td>" + info['type'] + "</td>");
+					//append("<td>" + info['could_be'] + "</td>");
+          //append("<td>" + (info['indexed'] ? "true" : "false") + "</td>");
         $body.append($row);
       });
     });
