@@ -9,7 +9,7 @@ title: Requesting Access to SAM Data
 
 #### SAM API
 
-The RESTful SAM API is open to the public! Once in production, the access to the API will be only available through (api.data.gov)[http://api.data.gov]. You will need an API key. The rate limits are set to the current defaults of 10,000 calls a day and 5 calls a second.
+The RESTful SAM API is open to the public! Once in production, the access to the API will be only available through [api.data.gov](http://api.data.gov). You will need an API key. The rate limits are set to the current defaults of 10,000 calls a day and 5 calls a second.
 
 #### SAM Entity Extracts and Interfaces
 
