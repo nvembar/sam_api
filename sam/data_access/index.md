@@ -12,6 +12,12 @@ SAM provides a number of roles to fit the needs of users based on mission requir
 
 ### SAM Role Definitions
 
+|  Column 1 |  Column 2 |   |   |   |
+|---|---|---|---|---|
+|  1 | 2  |   |   |   |
+|  1a |  2a |   |   |   |
+|   |   |   |   |   |
+
 ### SAM Role-to-Access Matrix
 
 Example: You are a Federal employee at USAID, working on a system that requires you to access vendor’s banking information. You plan to download a daily file (extract) to your system so you can access the information locally. You would need an extract that contains sensitive (financial) information. You need the Entity Management Data Package Sensitive, which means you must request the Sensitive Entity Management Data Viewer role.
