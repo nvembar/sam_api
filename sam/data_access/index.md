@@ -35,8 +35,8 @@ For security reasons, SAM administrators may not alter system account informatio
 ### Locating the Data Access Request for an Individual Account
 
 1. Log into SAM.gov.
-2. In the MY SAM menu select Data Access > Individual Data Access Request
-3. In the Select Data page, scroll down. Select the Data Access Role and User Type, and then click NEXT.
+2. In the **MY SAM** menu select **Data Access > Individual Data Access Request**
+3. In the **Select Data** page, scroll down. Select the **Data Access Role** and **User Type**, and then click **NEXT**.
 
 ### Locating the Data Access Request for a System Account
 
