@@ -19,6 +19,7 @@ Example: You are a Federal employee at USAID, working on a system that requires 
 With the SAM roles, you will have access to the information on the website, the extract, and the web service. There is no need for a separate request for each. It is up to you how to consume the data.
 
 ## 2
+![iamdomaindiagram](https://cloud.githubusercontent.com/assets/7384457/2880404/62abf22a-d475-11e3-9b9e-de033e77e9d7.png)
 
 
 
