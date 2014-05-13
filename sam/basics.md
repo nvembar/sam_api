@@ -10,7 +10,7 @@ The SAM API is a GET API which has one operation. The operation will retrieve an
 
 ##### Example URL
 
-[https://gw.uat.sam.gov/SamStatus/registrations/1459697830000](https://gw.uat.sam.gov/SamStatus/registrations/1459697830000)
+[https://test.sam.gov/SamStatus/registrations/1459697830000](https://test.sam.gov/SamStatus/registrations/1459697830000)
 
 ##### Retrieving entity information
 The endpoint for getting all data begins with ```/registrations```. 
