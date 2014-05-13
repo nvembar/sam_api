@@ -6,7 +6,7 @@ nav: basics
 
 ### API basics
 
-The SAM API is a GET API which has one operation. The operation will retrieve an entity's public information. It's endpoint is ```http://gw.uat.sam.gov/SamStatus/registrations/```. Note that this endpoint is currently pointing to the SAM UAT environment and will be updated when the API goes into production.
+The SAM API is a GET API which has one operation. The operation will retrieve an entity's public information. It's endpoint is ```http://test.sam.gov/SamStatus/registrations/```. Note that this endpoint is currently pointing to the SAM UAT environment and will be updated when the API goes into production.
 
 ##### Example URL
 
