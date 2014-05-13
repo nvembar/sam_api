@@ -85,7 +85,7 @@
       "description": "The date the entity was started or acquired. ISO-8601-formatted date",
 			"could_be": "2014-04-24T05:00:00.000"
     },
-    "fiscalYearCloseDay": {
+    "fiscalYearEndCloseDate": {
       "type": "string",
       "description": "The day of the year in MM/YY format that corresponds to the day on which the company's fiscal year closes",
 			"could_be": "09/30"
