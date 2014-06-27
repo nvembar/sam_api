@@ -10,6 +10,8 @@ The SAM API is a GET API which has one operation. The operation will retrieve an
 
 ##### Example URL
 
+Currently, the below URL won't work without you adding in an API key from api.data.gov. Add ```?api_key=<YOUR_API_KEY>``` to the below URL to successfully execute the call.
+
 [https://api.data.gov/sam/v1/registrations/1459697830000](https://gw.uat.sam.gov/sam/v1/registrations/1459697830000)
 
 ##### Retrieving entity information
