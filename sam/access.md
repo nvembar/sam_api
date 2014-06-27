@@ -13,7 +13,7 @@ The RESTful SAM API is open to the public! Once in production, the access to the
 
 #### SAM Entity Extracts and Interfaces
 
-The SAM Entity Extracts and Interfaces are current all restricted to use only by other government agencies. 
+The SAM Entity Extracts and Interfaces are currently all restricted to use only by other government agencies. The best way to keep on the events around the extract and interfaces is to speak to your IAE Change Control Board member and get onto the SAM Interfaces and Extracts Working Group (SIEWG).
 
 _Add more information here about how to get access_
 

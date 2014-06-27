@@ -17,6 +17,7 @@ The endpoint for getting all data begins with ```/v1/registrations```.
 
 The endpoint takes a single URL parameter which is the DUNS and DUNS+4 information concatenated. If the entity does not have a DUNS+4, the user should include ```0000```. 
 
+<<<<<<< HEAD
 For example, if an entity of interest has a DUNS number of ```012345678``` with no DUNS+4, the access to the endpoint would be at ```/sam/v1/registrations/0123456780000```. An entity with the same DUNS but with a DUNS+4 of ```9999``` would be accessed at ```/sam/v1/registrations/0123456789999```.
 
 ##### Finding DUNS numbers to use
