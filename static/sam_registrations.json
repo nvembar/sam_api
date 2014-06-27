@@ -175,20 +175,10 @@
       "description": "The status of the entity's registration",
 			"could_be": "ACTIVE"
     },
-    "statusMessage": {
-      "type": "string",
-      "description": "The text description of the status of the entity's registration",
-			"could_be": "Work in Progress"
-    },
     "businessTypes": {
       "type": "array",
       "description": "An array of business types determined by SBA or Ability One",
 			"could_be": "[\"ZZ\", \"2R\"]"
-    },
-    "sbaCertificationExpirationDate": {
-      "type": "date",
-      "description": "The date on which an entity's SBA certification expires",
-			"could_be": "2014-04-24T05:00:00.000"
     },
     "disasterRelief": {
       "type": "array",
