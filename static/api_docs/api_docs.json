@@ -6,7 +6,7 @@
 			{
 				"path": "/sam_swagger.json",
 				"name": "SAM Registrations",
-				"description": "Test version of the SAM Registrations API"
+				"description": "Registrations API to retrieve public data about SAM Registration data"
 			}
 		],
 		"info": {
