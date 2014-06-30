@@ -1,8 +1,8 @@
 {
 	"apiVersion": "0.5.0",
 	"swaggerVersion": "1.2",
-	"basePath": "https://gw.uat.sam.gov/SamStatus",
-	"resourcePath": "/registrations",
+	"basePath": "https://api.data.gov/sam",
+	"resourcePath": "/v1/registrations",
 	"produces": ["application/json"],
 	"apis": [{
 		"path": "/registrations/{registrationId}",
@@ -23,7 +23,7 @@
 				"name": "api_key",
 				"description": "An API Key from api.data.gov",
 				"dataType": "string",
-				"required": "false"
+				"required": "true"
 			}],
 			"summary": "Find a registration by its DUN+4 number",
 			"notes": "If the entity only has a 9-digit DUNS number, pad the end to include 4 zeros",
