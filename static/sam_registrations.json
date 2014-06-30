@@ -7,7 +7,7 @@
     },
     "duns4": {
       "type": "string",
-      "description": "The 4-digit extension to the DUNS number indicating subcomponents of the entity",
+      "description": " user-created 4-digit extension to the DUNS number indicating more than one set of U.S. banking information for that physical address",
 			"could_be": "0000"
     },
     "cage": {
