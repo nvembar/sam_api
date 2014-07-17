@@ -21,6 +21,8 @@ The endpoint takes a single URL parameter which is the DUNS and DUNS+4 informati
 
 For example, if an entity of interest has a DUNS number of ```012345678``` with no DUNS+4, the access to the endpoint would be at ```/sam/v1/registrations/0123456780000```. An entity with the same DUNS but with a DUNS+4 of ```9999``` would be accessed at ```/sam/v1/registrations/0123456789999```.
 
+The data in the API is updated daily by approximately 2 AM Eastern time for the prior day's data.
+
 ##### Finding DUNS numbers to use
 
 Until a search API is implemented (which is on its way), the best way to get DUNS numbers is to go to [SAM](http://www.sam.gov), click on ```Search Records``` and enter in a company into the Quick Search box. Each entity has a DUNS number that you'll see in the result set. You'll see a 9-digit number which represents the DUNS. You can then pad it out with four ```0```s as mentioned above.
