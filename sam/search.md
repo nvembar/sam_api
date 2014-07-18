@@ -70,14 +70,14 @@ The following are the fields you can search for using Advanced Search. Note that
 | SBA Certified 8A Program       | sba8AProgram                | true or false                     |
 | SBA Certified Hubzone Program  | sbaHubzoneProgram           | true or false                     |
 | Ability 1 Certified            | ability1                    | true or false                     |
-| Purpose of Registration        | purpose                     | Z1 - Federal AssistanceAwards<br>
-                                                                 Z2 - All Awards<br>
-                                                                 Z4 - AssistanceAwards & IGT<br>
-                                                                 Z5 - All Awards & IGT             |
-| Registration Status            | registrationStatus          | A - Active<br>
-                                                                 W - Work in Progress<br>
-                                                                 S - Submitted<br>
-                                                                 I - Inactive                      |
+| Purpose of Registration        | purpose                     | <ul><li>Z1 - Federal AssistanceAwards</li>     
+                                                                 <li>Z2 - All Awards</li>
+                                                                 <li>Z4 - AssistanceAwards & IGT</li>
+                                                                 <li>Z5 - All Awards & IGT</li></ul>    |
+| Registration Status            | registrationStatus          | <ul><li>A - Active</li>
+                                                                 <li>W - Work in Progress</li>
+                                                                 <li>S - Submitted</li>
+                                                                 <li>I - Inactive</li></ul>                      |
 | Disaster Response Contractor   | disasterResponse            | true or false                     |
 
 
