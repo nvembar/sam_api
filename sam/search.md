@@ -50,35 +50,35 @@ The search terms will be in parentheses. You can AND and OR search terms by putt
 
 The following are the fields you can search for using Advanced Search. Note that, where appropriate, we have used the same field name as the JSON output from the detailed results of the API.
 
-| Functional Field               | URL Search Field            | Possible Search Terms         |
-|--------------------------------|-----------------------------|-------------------------------|
-| Legal Business Name            | legalBusinessName           |                               |
-| Doing Business As Name         | doingBusinessAs             |                               |
-| CAGE code                      | cage                        |                               |
-| DUNS number                    | duns                        |                               |
-| Physical Address City          | samAddress.city             |                               |
-| Physical Address Country       | samAddress.country          |                               |
-| State                          | samAddress.stateOrProvince  |                               |
-| Zip Code                       | samAddress.zip              |                               |
-| Congressional District         | congressionalDistrict       |                               |
-| NAICS - Limited SB             | naicsLimitedSB              |                               |
-| NAICS - Any Size               | naicsAnySize                |                               |
-| Minority Owned Business        | minorityOwned               | true or false                 |
-| Women Owned Business           | womenOwned                  | true or false                 |
-| Veteran Owned Business         | veteranOwned                | true or false                 |
-| Service Disabled Veteran Owned | serviceDisabledVeteranOwned | true or false                 |
-| SBA Certified 8A Program       | sba8AProgram                | true or false                 |
-| SBA Certified Hubzone Program  | sbaHubzoneProgram           | true or false                 |
-| Ability 1 Certified            | ability1                    | true or false                 |
-| Purpose of Registration        | purpose                     | Z1 - Federal AssistanceAwards |
-|                                |                             | Z2 - All Awards               |
-|                                |                             | Z4 - AssistanceAwards & IGT   |
-|                                |                             | Z5 - All Awards & IGT         |
-| Registration Status            | registrationStatus          | A - Active                    |
-|                                |                             | W - Work in Progress          |
-|                                |                             | S - Submitted                 |
-|                                |                             | I - Inactive                  |
-| Disaster Response Contractor   | disasterResponse            | true or false                 |
+| Functional Field               | URL Search Field            | Possible Search Terms             |
+|--------------------------------|-----------------------------|-----------------------------------|
+| Legal Business Name            | legalBusinessName           |                                   |
+| Doing Business As Name         | doingBusinessAs             |                                   |
+| CAGE code                      | cage                        |                                   |
+| DUNS number                    | duns                        |                                   |
+| Physical Address City          | samAddress.city             |                                   |
+| Physical Address Country       | samAddress.country          |                                   |
+| State                          | samAddress.stateOrProvince  |                                   |
+| Zip Code                       | samAddress.zip              |                                   |
+| Congressional District         | congressionalDistrict       |                                   |
+| NAICS - Limited SB             | naicsLimitedSB              |                                   |
+| NAICS - Any Size               | naicsAnySize                |                                   |
+| Minority Owned Business        | minorityOwned               | true or false                     |
+| Women Owned Business           | womenOwned                  | true or false                     |
+| Veteran Owned Business         | veteranOwned                | true or false                     |
+| Service Disabled Veteran Owned | serviceDisabledVeteranOwned | true or false                     |
+| SBA Certified 8A Program       | sba8AProgram                | true or false                     |
+| SBA Certified Hubzone Program  | sbaHubzoneProgram           | true or false                     |
+| Ability 1 Certified            | ability1                    | true or false                     |
+| Purpose of Registration        | purpose                     | Z1 - Federal AssistanceAwards<br>
+                                                                 Z2 - All Awards<br>
+                                                                 Z4 - AssistanceAwards & IGT<br>
+                                                                 Z5 - All Awards & IGT             |
+| Registration Status            | registrationStatus          | A - Active<br>
+                                                                 W - Work in Progress<br>
+                                                                 S - Submitted<br>
+                                                                 I - Inactive                      |
+| Disaster Response Contractor   | disasterResponse            | true or false                     |
 
 
 
