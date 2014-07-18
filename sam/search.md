@@ -44,11 +44,13 @@ A basic example, it you want to make sure you're searching only legal name, you 
 
 The search terms will be in parentheses. You can AND and OR search terms by putting the terms ``` AND ``` or ``` OR ``` between terms, separated by spaces. (Eventually, they will be separated by ```+``` signs because of some ambiguities in the syntax, but for the moment, use spaces.)
 
+For example a user can search for entity that has a Legal Business Name that includes the term “incorporated” AND has selected the NAICS Code of 12345 for which they are considered to be a Small Business for.  
+
 [https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated) AND (naicsLimitedSB:12345)](https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated) AND (naicsLimitedSB:12345))
 
 #### Advanced search fields
 
-The following are the fields you can search for using Advanced Search. Note that, where appropriate, we have used the same field name as the JSON output from the detailed results of the API.
+The following are the fields you can search for using Advanced Search. Note that, where appropriate, we have used the same field name as the JSON output from the detailed results of the API. Some of them, like ```minorityOwned``` are interpreted appropriately.
 
 | Functional Field               | URL Search Field            | Possible Search Terms             |
 |--------------------------------|-----------------------------|-----------------------------------|
