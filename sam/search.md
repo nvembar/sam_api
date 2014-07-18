@@ -11,13 +11,13 @@ The Search API provides the opportunity to perform a search transaction in the f
 
 #### Quick Search:
 
-The Quick Search functionality allows a user to enter a single term which is then queried against eight fields in the SAM database.  The results should return the same businesses, grantees, and other registrants in SAM that are found when you do a "Quick Search" 
+The Quick Search functionality allows a user to enter a single term which is then queried against eight fields in the SAM database.  The results should return the same businesses, grantees, and other registrants in SAM that are found when you do a "Quick Search" on SAM itself.
 
 Example: [https://api.data.gov/sam/v1/registrations?qterms=GSA](https://api.data.gov/sam/v1/registrations?qterms=GSA)
 
 You can include spaces by putting them in double-quotes and URL-encoding them like so:
 
-[https://api.data.gov/sam/v1/registrations?qterms="My%20Company](https://api.data.gov/sam/v1/registrations?qterms="My%20Company")
+[https://api.data.gov/sam/v1/registrations?qterms="My%20Company"](https://api.data.gov/sam/v1/registrations?qterms="My%20Company")
 
 The Search API will then query the SAM database and display any registrant that matches the user selected search term contained in any of the following fields: 
 
@@ -29,3 +29,21 @@ The Search API will then query the SAM database and display any registrant that 
 | DUNS+4                 |
 | CAGE Code              |
 | DoDAAC                 |
+
+Note that the search will add a wildcard to the end of any passed in quick search term. So ```qterms=Rob``` will match "Robot Co., Inc."
+
+#### Advanced Search
+
+The Advanced Search functionality allows a user to enter a criteria or value and a category which is then used to query the database to return all registrations that match that selection criteria.  In Advanced Search users are able to string multiple criteria and categories to better refine their search and return a more specific list of registration.
+
+Advanced Search uses the same ```qterms``` construct that we used for quick search, but follows more closely to the [Lucene-based syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html) for querying by specific terms. It's not exactly the same, but should be familiar for anyone who's used to that syntax.
+
+A basic example, it you want to make sure you're searching only legal name, you can run the following search:
+
+[https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated)](https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated))
+
+
+
+
+
+
