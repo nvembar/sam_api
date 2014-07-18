@@ -70,16 +70,21 @@ The following are the fields you can search for using Advanced Search. Note that
 | SBA Certified 8A Program       | sba8AProgram                | true or false                     |
 | SBA Certified Hubzone Program  | sbaHubzoneProgram           | true or false                     |
 | Ability 1 Certified            | ability1                    | true or false                     |
-| Purpose of Registration        | purpose                     | <ul><li>Z1 - Federal AssistanceAwards</li>     
-                                                                 <li>Z2 - All Awards</li>
-                                                                 <li>Z4 - AssistanceAwards & IGT</li>
-                                                                 <li>Z5 - All Awards & IGT</li></ul>    |
-| Registration Status            | registrationStatus          | <ul><li>A - Active</li>
-                                                                 <li>W - Work in Progress</li>
-                                                                 <li>S - Submitted</li>
-                                                                 <li>I - Inactive</li></ul>                      |
+| Purpose of Registration        | purpose                     | See codes below                   |
+| Registration Status            | registrationStatus          | See codes below                   |
 | Disaster Response Contractor   | disasterResponse            | true or false                     |
 
+##### Codes for Purpose of registration
 
+<ul>
+<li>Z1 - Federal AssistanceAwards</li>     
+<li>Z2 - All Awards</li>
+<li>Z4 - AssistanceAwards & IGT</li>
+<li>Z5 - All Awards & IGT</li></ul> 
 
+##### Codes for registration status
 
+<ul><li>A - Active</li>
+<li>W - Work in Progress</li>
+<li>S - Submitted</li>
+<li>I - Inactive</li></ul>  
