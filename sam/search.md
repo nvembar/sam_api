@@ -5,7 +5,7 @@ layout: default
 ---
 
 As part of the next SAM quarterly release, the SAM API service will expand to include the functionality for Search.  The SAM Search API has been developed to mimic the Search functionality that is currently available from the SAM website.  
-The Search API provides the opportunity to perform a search transaction in the following two options. Quick Search which takes a single search term provided by the user and compares it to a set of predefined database fields.  Advanced Search allows the user to search by entering a value that is then used to search a user selected predefined search category. 
+The Search API provides the opportunity to perform a search transaction in the following two options. Quick Search takes a single search term provided by the user and compares it to a set of predefined database fields.  Advanced Search allows the user to search by entering a value that is then used to search a user selected predefined search category. 
 
 ### Searching SAM using the API
 
@@ -34,17 +34,17 @@ Note that the search will add a wildcard to the end of any passed in quick searc
 
 #### Advanced Search
 
-The Advanced Search functionality allows a user to enter a criteria or value and a category which is then used to query the database to return all registrations that match that selection criteria.  In Advanced Search users are able to string multiple criteria and categories to better refine their search and return a more specific list of registration.
+The Advanced Search functionality allows a user to enter criteria or a value and a category which is then used to query the database to return all registrations that match that selection criteria.  In Advanced Search users are able to string multiple criteria and categories to better refine their search and return a more specific list of registration.
 
 Advanced Search uses the same ```qterms``` construct that we used for quick search, but follows more closely to the [Lucene-based syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html) for querying by specific terms. It's not exactly the same, but should be familiar for anyone who's used to that syntax.
 
-A basic example, it you want to make sure you're searching only legal name, you can run the following search:
+As a basic example, if you want to make sure you're searching only legal name, you can run the following search:
 
 [https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated)](https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated))
 
-The search terms will be in parentheses. You can AND and OR search terms by putting the terms ``` AND ``` or ``` OR ``` between terms, separated by spaces. (Eventually, they will be separated by ```+``` signs because of some ambiguities in the syntax, but for the moment, use spaces.)
+The search terms will be in parentheses. You can AND and OR search terms together by putting the terms ``` AND ``` or ``` OR ``` between terms, separated by spaces. (Eventually, they will be separated by ```+``` signs because of some ambiguities in the syntax, but for the moment, use spaces.)
 
-For example a user can search for entity that has a Legal Business Name that includes the term “incorporated” AND has selected the NAICS Code of 12345 for which they are considered to be a Small Business for.  
+For example a user can search for an entity that has a Legal Business Name that includes the term “incorporated” AND has selected the NAICS Code of 12345 for which they are considered to be a Small Business for.  
 
 [https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated) AND (naicsLimitedSB:12345)](https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated) AND (naicsLimitedSB:12345))
 
