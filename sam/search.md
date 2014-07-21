@@ -7,6 +7,8 @@ layout: default
 As part of the next SAM quarterly release, the SAM API service will expand to include the functionality for Search.  The SAM Search API has been developed to mimic the Search functionality that is currently available from the SAM website.  
 The Search API provides the opportunity to perform a search transaction in the following two options. Quick Search takes a single search term provided by the user and compares it to a set of predefined database fields.  Advanced Search allows the user to search by entering a value that is then used to search a user selected predefined search category. 
 
+Notice that we are implementing this through a JSON-based "hypermedia as the engine of application state" (HATEOAS) implementation with the appropriate ```links``` object within the result set. The intent going forward will be use this model to allow for a scalable architecture of IAE's APIs to be built. The biggest implication of this for the user of the API is: don't try to construct links yourself based on the patterns you see in the ```links``` object. Assume that those patterns could change. We will account for this requirement as we implement our rate-limiting for the API.
+
 ### Searching SAM using the API
 
 #### Quick Search:
