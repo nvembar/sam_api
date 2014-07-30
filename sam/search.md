@@ -11,8 +11,10 @@ The Search API provides the opportunity to perform a search transaction in the f
 Notice that we are implementing this through a JSON-based “hypermedia as the engine of application state” (HATEOAS with the appropriate links object within the result set). The intent going forward will be to use this model to allow for a scalable architecture of IAE’s APIs to be built. 
 Note:  Don’t try to construct links yourself based on the patterns you see in the links object. Assume that those patterns could change. We will account for this requirement as we implement our rate-limiting for the API.
 Searching SAM using the API
-Quick Search:
+
+**Quick Search:**
 The Quick Search functionality allows a user to enter a single term which is then queried against six fields in the SAM database. The results should return the same entities, grantees, and other registrants in SAM that are found when you do a “Quick Search” on SAM itself.
+
 Example: https://api.data.gov/samsearch/v1/registrations?qterms=GSA
 The Search API will then query the SAM database and display any registrant that matches the user selected search term contained in any of the following fields: 
 
@@ -27,16 +29,19 @@ The Search API will then query the SAM database and display any registrant that 
 |DoDAAC|
 
 
-Note that the search will automatically add a wildcard to the end of any term passed in quick search. So qterms=Rob will match “Robot Co., Inc.”
-Advanced Search:
+**Note** that the search will automatically add a wildcard to the end of any term passed in quick search. So qterms=Rob will match “Robot Co., Inc.”
+
+**Advanced Search:**
 The Advanced Search functionality allows a user to enter criteria or a value and a category which is then used to query the database to return all registrations that match that selection criterion. In Advanced Search users are able to string multiple criteria and categories to better refine their search and return a more specific list of registrations.
 Advanced Search uses the same qterms construct that we used for quick search, but follows more closely to the Lucene-based syntax for querying by specific terms. It is not exactly the same, but should be familiar for anyone who is used to that syntax.
+
 As a basic example, if you want to make sure you’re searching only Legal Business Name, you can run the following search:
 https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated)
 The search terms will be in parentheses. You can group AND and OR search terms together by putting the terms AND or OR between terms, separated by spaces. (Eventually, they will be separated by + signs because of some ambiguities in the syntax, but for the moment, use spaces.)
 For example a user can search for an entity that has a Legal Business Name that includes the term “incorporated” AND has selected the NAICS Code of 123456 for which they are considered to be a Small Business for. 
 https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated) AND (naicsLimitedSB:12345)
-Advanced search fields
+
+**Advanced search fields**
 The following are the fields you can search for using Advanced Search. Note that, where appropriate, we have used the same field name as the JSON output from the detailed results of the API. Some of them, like minorityOwned are interpreted appropriately.
 
 #### Functional search fields
@@ -233,7 +238,7 @@ than 51 percent of the stock of which is owned by one or more service-disabled v
 <li>S - Submitted</li>
 <li>I - Inactive</li></ul> 
 
-API Search Output:
+**API Search Output:**
 
 The search results that match the searched condition will be displayed in JSON format and include the following data elements:
 
@@ -292,11 +297,7 @@ The search results that match the searched condition will be displayed in JSON f
 
 <tr>
 <td valign="bottom" ><p>CAGE/NCAGE Code</p></td>
-<td valign="top" ><p>The Contractor and Government Entity (CAGE) Code or NATO </p>
-
-<p>Commercial and </p>
-
-<p>Government Entity (NCAGE) Code. This number is assigned to the registration if one does not already exist.</p></td>
+<td valign="top" ><p>The Contractor and Government Entity (CAGE) Code or NATO Commercial and Government Entity (NCAGE) Code. This number is assigned to the registration if one does not already exist.</p></td>
 <td valign="top" ><p>"cage":</p></td>
 </tr>
 
@@ -316,14 +317,14 @@ The search results that match the searched condition will be displayed in JSON f
 </table>
 
 
+**The JSON result will return as follows:**
 
-The JSON result will return as follows:
 {"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL","line1":"1234 M St","city":
 "Chicago","country":"USA"},"expirationDate":"2015-03-24 13:56:45.000",
 "status":"Active","hasDelinquentFederalDebt":false,"duns":"123456789","links":[{"rel":"details","href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],"dunsPlus4":"0000","legalBusinessName":"Sample Company LLC","cage":"12345"}],"links":[{"rel":"self","href":
 "http://api.data.gov/samsearch/v1/registrations?qterms=123456789&start=1&length=10"}]}
 
-Pagination
+**Pagination**
 
 The results will be defaulted to 10 records per JSON page. An API developer can navigate between pages by using the Self, Previous, First, and Next links (as appropriate depending on the number of records) at the end of each page.
 
@@ -333,7 +334,7 @@ An API developer can change the number of records returned per page by manipulat
 
 http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25
 
-Connecting Search Fields
+**Connecting Search Fields**
 
 Plus signs '+’ should be used as spaces between terms. ‘+AND+’ and ‘+OR+’ are always used to join two terms like a boolean AND and OR.
 
@@ -350,7 +351,7 @@ https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or
 
 https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals 
 
-Grouping Search Terms
+**Grouping Search Terms**
 
 Terms can be grouped against the same API advanced search field by using commas between each term.
 
@@ -373,7 +374,7 @@ https://test.sam.gov/samsearch/v1/registrations?qterms=naicsAnySize:(111332,3364
 Exception: https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)
 
 
-TIPS/HINTS
+**TIPS/HINTS**
 
 There are certain tips to note in order to construct an API search URL properly. We have listed several below. If you discover others as you work with our API, please add them to the ‘Feedback’ section of this GitHub site.
 
