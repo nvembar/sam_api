@@ -16,7 +16,6 @@ The Quick Search functionality allows a user to enter a single term which is the
 Example: https://api.data.gov/samsearch/v1/registrations?qterms=GSA
 The Search API will then query the SAM database and display any registrant that matches the user selected search term contained in any of the following fields: 
 
-FORMAT THIS
 
 | Field|
 |----------------------|
