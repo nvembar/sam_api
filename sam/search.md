@@ -10,7 +10,8 @@ As part of the next SAM quarterly release, the SAM API service will expand to in
 The Search API provides the opportunity to perform a search transaction in the following two options. Quick Search takes a single search term provided by the user and compares it to a set of predefined database fields. Advanced Search allows the user to search by entering a value that is then used to search a user selected predefined search category. 
 Notice that we are implementing this through a JSON-based “hypermedia as the engine of application state” (HATEOAS with the appropriate links object within the result set). The intent going forward will be to use this model to allow for a scalable architecture of IAE’s APIs to be built. 
 Note:  Don’t try to construct links yourself based on the patterns you see in the links object. Assume that those patterns could change. We will account for this requirement as we implement our rate-limiting for the API.
-Searching SAM using the API
+
+**Searching SAM using the API**
 
 **Quick Search:**
 The Quick Search functionality allows a user to enter a single term which is then queried against six fields in the SAM database. The results should return the same entities, grantees, and other registrants in SAM that are found when you do a “Quick Search” on SAM itself.
