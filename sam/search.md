@@ -41,16 +41,21 @@ The following are the fields you can search for using Advanced Search. Note that
 
 TABLE
 
-Codes for Purpose of Registration
-•	Z1 - Federal AssistanceAwards (Grantees)
-•	Z2 - All Awards (Contracts and Federal Assistance)
-•	Z4 - AssistanceAwards & IGT
-•	Z5 - All Awards & IGT
-Codes for Registration Status
-•	A - Active
-•	W - Work in Progress
-•	S - Submitted
-•	I – Inactive
+##### Codes for Purpose of registration
+
+<ul>
+<li>Z1 - Federal AssistanceAwards</li>     
+<li>Z2 - All Awards</li>
+<li>Z4 - AssistanceAwards & IGT</li>
+<li>Z5 - All Awards & IGT</li></ul> 
+
+##### Codes for registration status
+
+<ul><li>A - Active</li>
+<li>W - Work in Progress</li>
+<li>S - Submitted</li>
+<li>I - Inactive</li></ul> 
+
 API Search Output:
 
 The search results that match the searched condition will be displayed in JSON format and include the following data elements:
