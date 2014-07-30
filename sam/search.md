@@ -39,7 +39,13 @@ https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorp
 Advanced search fields
 The following are the fields you can search for using Advanced Search. Note that, where appropriate, we have used the same field name as the JSON output from the detailed results of the API. Some of them, like minorityOwned are interpreted appropriately.
 
-TABLE
+#### Functional search fields
+|**Functional Field**         | **Definition**                          |**URL Search Field**| **Possible Search Terms**|
+|-----------------------------|_________________________________________|____________________|__________________________|
+|Legal Business Name          |The name that has been registered for the organization at Dun and Bradstreet (D&B)|  |
+
+
+
 
 ##### Codes for Purpose of registration
 
