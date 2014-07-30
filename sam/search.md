@@ -239,34 +239,7 @@ The search results that match the searched condition will be displayed in JSON f
 
 #### Advanced Search Fields
 TABLE
-Funtional Field | Definition | URL Search Field | Possible Search Terms|
-Legal Business Name| |The name that has been registered for the organization at Dun and Bradstreet (D&B).| legalBusinessName  NOTE: This field also searches ‘Doing Business As Name’| |
 
-
- Functional Field               | URL Search Field            | Possible Search Terms             |Definition
-|--------------------------------|-----------------------------|-----------------------------------|
-| Legal Business Name            | legalBusinessName  NOTE: This field also searches ‘Doing Business As Name’         |                                   |
-| Doing Business As Name         | doingBusinessAs             |                                   |
-| CAGE code                      | cage                        |                                   |
-| DUNS number                    | duns                        |                                   |
-| Physical Address City          | samAddress.city             |                                   |
-| Physical Address Country       | samAddress.country          |                                   |
-| State                          | samAddress.stateOrProvince  |                                   |
-| Zip Code                       | samAddress.zip              |                                   |
-| Congressional District         | congressionalDistrict       |                                   |
-| NAICS - Limited SB             | naicsLimitedSB              |                                   |
-| NAICS - Any Size               | naicsAnySize                |                                   |
-| Minority Owned Business        | minorityOwned               | true or false                     |
-| Women Owned Business           | womenOwned                  | true or false                     |
-| Veteran Owned Business         | veteranOwned                | true or false                     |
-| Service Disabled Veteran Owned | serviceDisabledVeteranOwned | true or false                     |
-| SBA Certified 8A Program       | sba8AProgram                | true or false                     |
-| SBA Certified Hubzone Program  | sbaHubzoneProgram           | true or false                     |
-| Ability 1 Certified            | ability1                    | true or false                     |
-| Purpose of Registration        | purpose                     | See codes below                   |
-| Registration Status            | registrationStatus          | See codes below                   |
-| Disaster Response Contractor   | disasterResponse            | true or false                   
-|
 
 The JSON result will return as follows:
 {"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL","line1":"1234 M St","city":
