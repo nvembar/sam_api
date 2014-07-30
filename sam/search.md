@@ -170,9 +170,7 @@ than 51 percent of the stock of which is owned by one or more service-disabled v
 <td><p>SBA Certified 8A Program</p></td>
 <td valign="top" ><p>An SBA program for small concerns owned by socially and economically disadvantaged persons.</p>
 
-<p>Firms admitted to the program can receive Federal contracts designated for 8(a)</p>
-
-<p>Business Development Program participants, as well as management and technical assistance.</p>
+<p>Firms admitted to the program can receive Federal contracts designated for 8(a) Business Development Program participants, as well as management and technical assistance.</p>
 
 <p>For more information please see: <a href="http://www.sba.gov/content/8a-business-development-0">http://www.sba.gov/content/8a-business-development-0</a></p></td>
 <td><p>sba8AProgram</p></td>
