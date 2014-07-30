@@ -238,7 +238,83 @@ API Search Output:
 The search results that match the searched condition will be displayed in JSON format and include the following data elements:
 
 #### Advanced Search Fields
-TABLE
+<table border="1" cellspacing="0" cellpadding="0" > 
+<tbody>
+<tr>
+<td valign="top" ><p><b>Field Name:</b></p></td>
+<td valign="top" ><p><b>Definition:</b></p></td>
+<td valign="top" ><p><b>Representation in Output:</b></p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>Legal Business Name</p></td>
+<td valign="top" ><p>The name that has been registered for the organization at Dun and Bradstreet (D&amp;B).</p></td>
+<td valign="top" ><p>"legalBusinessName":</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>Status</p></td>
+<td valign="top" ><p>The current status of the registration as it appears in SAM. Options are: Draft, Work In Progress, Submitted, Active, Inactive. </p></td>
+<td valign="top" ><p>"status":</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>DUNS</p></td>
+<td valign="top" ><p>Data Universal Numbering System (DUNS) is a unique nine digit number that is administered by Dun and Bradstreet (D&amp;B) and is a required data element for all </p>
+
+<p>registrants in SAM.</p></td>
+<td valign="top" ><p>"duns":</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>DUNS +4</p></td>
+<td valign="top" ><p>The DUNS+4 is a user generated four digit number created if the registered entity only has one physical location but more than one bank account.</p></td>
+<td valign="top" ><p>"dunsPlus4”:</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>Has Active Exclusion</p></td>
+<td valign="top" ><p>True or False value depending on whether the entity has had Exclusion created against it or not.</p></td>
+<td valign="top" ><p>"hasKnownExclusion":</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>Expiration Date</p></td>
+<td valign="top" ><p>The date that the entity registration will expire if the user does not update his/her registration. Registrations must be updated every 360 days to remain Active.</p></td>
+<td valign="top" ><p>"expirationDate":</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>Physical Address</p></td>
+<td valign="top" ><p>The address registered for the entity at Dun and Bradstreet (D&amp;B).</p></td>
+<td valign="top" ><p>“samAddress":</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>CAGE/NCAGE Code</p></td>
+<td valign="top" ><p>The Contractor and Government Entity (CAGE) Code or NATO </p>
+
+<p>Commercial and </p>
+
+<p>Government Entity (NCAGE) Code. This number is assigned to the registration if one does not already exist.</p></td>
+<td valign="top" ><p>"cage":</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>DODAAC</p></td>
+<td valign="top" ><p>The Department of Defense Activity Address Code (DoDAAC). This is applicable for the Department of Defense (DoD) entities only.</p></td>
+<td valign="top" ><p>“dodaac”:</p></td>
+</tr>
+
+<tr>
+<td valign="bottom" ><p>Delinquent Federal Debt Indicator</p></td>
+<td valign="top" ><p>True or False value based on whether the Department of Treasury has indicated the entity has Delinquent Federal Debt or not.</p></td>
+<td valign="top" ><p>"hasDelinquentFederalDebt":</p></td>
+</tr>
+
+</tbody>
+</table>
+
 
 
 The JSON result will return as follows:
