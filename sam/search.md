@@ -42,7 +42,7 @@ The following are the fields you can search for using Advanced Search. Note that
 #### Functional search fields
 |**Functional Field**         | **Definition**                          |**URL Search Field**| **Possible Search Terms**|
 |-----------------------------|_________________________________________|____________________|__________________________|
-|Legal Business Name          |The name that has been registered for the organization at Dun and Bradstreet (D&B)|  |
+|Legal Business Name          |The name that has been registered for the organization at Dun and Bradstreet (D&B)|     |
 
 
 
