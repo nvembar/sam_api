@@ -40,9 +40,200 @@ Advanced search fields
 The following are the fields you can search for using Advanced Search. Note that, where appropriate, we have used the same field name as the JSON output from the detailed results of the API. Some of them, like minorityOwned are interpreted appropriately.
 
 #### Functional search fields
-|**Functional Field**         | **Definition**                          |**URL Search Field**| **Possible Search Terms**|
-|-----------------------------|_________________________________________|____________________|__________________________|
-|Legal Business Name          |The name that has been registered for the organization at Dun and Bradstreet (D&B)|     |
+<table border="1" cellspacing="0" cellpadding="0" > 
+<tbody>
+<tr>
+<td valign="top" ><p><b>Functional Field</b></p></td>
+<td valign="top" ><p><b>Definition</b></p></td>
+<td valign="top" ><p><b>URL Search Field</b></p></td>
+<td valign="top" ><p><b>Possible Search Terms</b></p></td>
+</tr>
+
+<tr>
+<td><p>Legal Business Name</p></td>
+<td valign="top" ><p>The name that has been registered for the organization at Dun and Bradstreet (D&amp;B).</p></td>
+<td><p>legalBusinessName</p>
+
+<p>NOTE: This field also searches ‘Doing Business As Name’</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>Doing Business As Name</p></td>
+<td valign="top" ><p>Doing Business As (DBA) is the commonly used other name, such as a franchise, licensee name, or an acronym for the entity. The DBA is also part of the registered name at D&amp;B.</p></td>
+<td><p>doingBusinessAs</p>
+
+<p>NOTE: This field also searches ‘Legal Business Name’</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>CAGE/NCAGE code</p></td>
+<td valign="top" ><p>The Contractor and Government Entity (CAGE) Code or NATO </p>
+
+<p>Commercial and </p>
+
+<p>Government Entity (NCAGE) Code. This number is assigned to the registration if one does not already exist.</p></td>
+<td><p>cage</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>DUNS number</p></td>
+<td valign="top" ><p>Data Universal Numbering System (DUNS) is a unique nine digit number that is administered by Dun and Bradstreet (D&amp;B) and is a required data element for all registrants in SAM.</p></td>
+<td><p>duns</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>Physical Address City</p></td>
+<td valign="top" ><p>The city of the address registered for the entity at Dun and Bradstreet (D&amp;B).</p></td>
+<td><p>samAddress.city</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>Physical Address Country</p></td>
+<td valign="top" ><p>The country of the address registered for the entity at Dun and Bradstreet (D&amp;B).</p></td>
+<td><p>samAddress.country</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>State</p></td>
+<td valign="top" ><p>The state of the address registered for the entity at Dun and Bradstreet (D&amp;B).</p></td>
+<td><p>samAddress.stateOrProvince</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>Zip Code</p></td>
+<td valign="top" ><p>The zip code of the address registered for the entity at Dun and Bradstreet (D&amp;B).</p></td>
+<td><p>samAddress.zip</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>Congressional District</p></td>
+<td valign="top" ><p>An electoral division of a state based on the zip-code in the entity's physical address.</p></td>
+<td><p>congressionalDistrict</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>NAICS - Limited SB</p></td>
+<td valign="top" ><p>The North American Industry Classification System (NAICS) code represents the type of industry in which the entity does business. ‘Limited SB’ will return only entities which are considered small business but only for the NAICS selected by the registrant in their entity registration for the particular NAICS input into search field.</p></td>
+<td><p>naicsLimitedSB</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>NAICS - Any Size</p></td>
+<td valign="top" ><p>The North American Industry Classification System (NAICS) code represents the type of industry in which the entity does business. ‘Any Size’ will return all records (large and small business) for the particular NAICS input into search field.</p></td>
+<td><p>naicsAnySize</p></td>
+<td valign="top" > </td>
+</tr>
+
+<tr>
+<td><p>Minority Owned Business</p></td>
+<td valign="top" ><p>A minority business is defined as a business in which more than 51% of the interest, stock and otherwise, is owned by minority group members. If you select this category, you will need to select a subcategory that best represents the persons who hold primary ownership. Subcategories include Asian-Pacific American Owned, Subcontinent Asian (Asian Indian) Owned, Black American Owned, Hispanic American Owned, Native </p>
+
+<p>American Owned, or Other.</p></td>
+<td><p>minorityOwned</p></td>
+<td><p>true or false</p></td>
+</tr>
+
+<tr>
+<td><p>Woman Owned Business</p></td>
+<td valign="top" ><p>Woman-Owned Business means a business (1) that is at least 51 percent owned by one or more women; or, in the case of any publicly owned business, at least 51 percent of the stock of which is owned by one or more women; and (2) whose management and daily business operations are controlled by one or more women.</p></td>
+<td><p>womanOwned</p></td>
+<td><p>true or false</p></td>
+</tr>
+
+<tr>
+<td><p>Veteran Owned Business</p></td>
+<td valign="top" ><p>Veteran-Owned Business means a business that (1) not less than 51 percent of which is owned by one or </p>
+
+<p>more veterans (as defined at 38 U.S.C. 101(2)) or, in the case of any publicly owned business, not less than 51 percent of the stock of which is owned by one or more veterans; and (2) the management and daily business operations of which are controlled by one or more veterans. For more information please see: </p>
+
+<p>http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCOD</p>
+
+<p>E-2011-title38.pdf.</p></td>
+<td><p>veteranOwned</p></td>
+<td><p>true or false</p></td>
+</tr>
+
+<tr>
+<td><p>Service Disabled Veteran Owned</p></td>
+<td valign="top" ><p>Service Disabled Veteran Owned Business means a business that (i) not less than 51 percent of which is owned by one or more service-disabled veterans or, in the case of any publicly owned business, not less </p>
+
+<p>than 51 percent of the stock of which is owned by one or more service-</p>
+
+<p>disabled veterans; and (ii) the management and daily business operations of which are controlled by one or more service-disabled veterans or, in the case of a service-disabled veteran with permanent and severe disability, the spouse or permanent caregiver of such veteran. “Service-disabled veteran” means a veteran, as defined in 38 U.S.C. 101(2), with a disability that is service-connected, as defined in 38 U.S.C. 101(16). F</p>
+
+<p>or more information please see: http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf</p></td>
+<td><p>serviceDisabledVeteranOwned</p></td>
+<td><p>true or false</p></td>
+</tr>
+
+<tr>
+<td><p>SBA Certified 8A Program</p></td>
+<td valign="top" ><p>An SBA program for small concerns owned by socially and economically disadvantaged persons.</p>
+
+<p>Firms admitted to the program can receive Federal contracts designated for 8(a)</p>
+
+<p>Business Development Program participants, as well as management and technical assistance.</p>
+
+<p>For more information please see: <a href="http://www.sba.gov/content/8a-business-development-0">http://www.sba.gov/content/8a-business-development-0</a></p></td>
+<td><p>sba8AProgram</p></td>
+<td><p>true or false</p></td>
+</tr>
+
+<tr>
+<td><p>SBA Certified HUBzone Program</p></td>
+<td valign="top" ><p>The Historically Underutilized Business Zones (HUBZone) program helps small businesses in urban and rural communities gain preferential access to federal procurement opportunities. These preferences go to </p>
+
+<p>small businesses that obtain HUBZone certification in part by employing staff who live in a HUBZone. The company must also maintain a "principal office" in one of these specially designated areas.</p>
+
+<p>For more information please see: http://www.sba.gov/content/hubzone-0</p></td>
+<td><p>sbaHubzoneProgram</p></td>
+<td><p>true or false</p></td>
+</tr>
+
+<tr>
+<td><p>AbilityOne Certified</p></td>
+<td valign="top" ><p>The AbilityOne Program is the largest single provider of jobs for people who are blind or have other </p>
+
+<p>significant disabilities in the United States. The AbilityOne Program uses the purchasing power of the federal government to buy products and services from participating, community</p>
+
+<p>-based nonprofit agencies nationwide dedicated to training and employing individuals with disabilities.</p></td>
+<td><p>ability1</p></td>
+<td><p>true or false</p></td>
+</tr>
+
+<tr>
+<td><p>Purpose of Registration</p></td>
+<td valign="top" ><p>The value that indicates what type of business the entity intends to do with the government (Contracts, Grants and Federal Assistance, Intra-Governmental Transactions).</p></td>
+<td><p>purpose</p></td>
+<td><p>See codes below</p></td>
+</tr>
+
+<tr>
+<td><p>Registration Status</p></td>
+<td valign="top" ><p>The current status of the registration as it appears in SAM. </p></td>
+<td><p>registrationStatus</p></td>
+<td><p>See codes below</p></td>
+</tr>
+
+<tr>
+<td><p>Disaster Response Contractor</p></td>
+<td valign="top" ><p>Those contractors who are willing to provide debris removal, distribution of supplies, reconstruction, and other disaster or emergency relief supplies and/or services.</p></td>
+<td><p>disasterResponse</p></td>
+<td><p>true or false</p></td>
+</tr>
+
+</tbody>
+</table>
 
 
 
