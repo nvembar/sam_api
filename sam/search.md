@@ -152,9 +152,7 @@ The following are the fields you can search for using Advanced Search. Note that
 
 <tr>
 <td><p>Veteran Owned Business</p></td>
-<td valign="top" ><p>Veteran-Owned Business means a business that (1) not less than 51 percent of which is owned by one or </p>
-
-<p>more veterans (as defined at 38 U.S.C. 101(2)) or, in the case of any publicly owned business, not less than 51 percent of the stock of which is owned by one or more veterans; and (2) the management and daily business operations of which are controlled by one or more veterans. For more information please see: </p>
+<td valign="top" ><p>Veteran-Owned Business means a business that (1) not less than 51 percent of which is owned by one or more veterans (as defined at 38 U.S.C. 101(2)) or, in the case of any publicly owned business, not less than 51 percent of the stock of which is owned by one or more veterans; and (2) the management and daily business operations of which are controlled by one or more veterans. For more information please see: </p>
 
 <p>http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCOD</p>
 
@@ -165,11 +163,8 @@ The following are the fields you can search for using Advanced Search. Note that
 
 <tr>
 <td><p>Service Disabled Veteran Owned</p></td>
-<td valign="top" ><p>Service Disabled Veteran Owned Business means a business that (i) not less than 51 percent of which is owned by one or more service-disabled veterans or, in the case of any publicly owned business, not less </p>
-
-<p>than 51 percent of the stock of which is owned by one or more service-</p>
-
-<p>disabled veterans; and (ii) the management and daily business operations of which are controlled by one or more service-disabled veterans or, in the case of a service-disabled veteran with permanent and severe disability, the spouse or permanent caregiver of such veteran. “Service-disabled veteran” means a veteran, as defined in 38 U.S.C. 101(2), with a disability that is service-connected, as defined in 38 U.S.C. 101(16). F</p>
+<td valign="top" ><p>Service Disabled Veteran Owned Business means a business that (i) not less than 51 percent of which is owned by one or more service-disabled veterans or, in the case of any publicly owned business, not less 
+than 51 percent of the stock of which is owned by one or more service-disabled veterans; and (ii) the management and daily business operations of which are controlled by one or more service-disabled veterans or, in the case of a service-disabled veteran with permanent and severe disability, the spouse or permanent caregiver of such veteran. “Service-disabled veteran” means a veteran, as defined in 38 U.S.C. 101(2), with a disability that is service-connected, as defined in 38 U.S.C. 101(16). F</p>
 
 <p>or more information please see: http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf</p></td>
 <td><p>serviceDisabledVeteranOwned</p></td>
@@ -191,9 +186,7 @@ The following are the fields you can search for using Advanced Search. Note that
 
 <tr>
 <td><p>SBA Certified HUBzone Program</p></td>
-<td valign="top" ><p>The Historically Underutilized Business Zones (HUBZone) program helps small businesses in urban and rural communities gain preferential access to federal procurement opportunities. These preferences go to </p>
-
-<p>small businesses that obtain HUBZone certification in part by employing staff who live in a HUBZone. The company must also maintain a "principal office" in one of these specially designated areas.</p>
+<td valign="top" ><p>The Historically Underutilized Business Zones (HUBZone) program helps small businesses in urban and rural communities gain preferential access to federal procurement opportunities. These preferences go to small businesses that obtain HUBZone certification in part by employing staff who live in a HUBZone. The company must also maintain a "principal office" in one of these specially designated areas.</p>
 
 <p>For more information please see: http://www.sba.gov/content/hubzone-0</p></td>
 <td><p>sbaHubzoneProgram</p></td>
@@ -202,11 +195,8 @@ The following are the fields you can search for using Advanced Search. Note that
 
 <tr>
 <td><p>AbilityOne Certified</p></td>
-<td valign="top" ><p>The AbilityOne Program is the largest single provider of jobs for people who are blind or have other </p>
-
-<p>significant disabilities in the United States. The AbilityOne Program uses the purchasing power of the federal government to buy products and services from participating, community</p>
-
-<p>-based nonprofit agencies nationwide dedicated to training and employing individuals with disabilities.</p></td>
+<td valign="top" ><p>The AbilityOne Program is the largest single provider of jobs for people who are blind or have other significant disabilities in the United States. The AbilityOne Program uses the purchasing power of the federal government to buy products and services from participating, community-based nonprofit agencies nationwide dedicated to training and employing individuals with disabilities.
+</p></td>
 <td><p>ability1</p></td>
 <td><p>true or false</p></td>
 </tr>
