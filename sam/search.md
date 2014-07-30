@@ -69,11 +69,7 @@ The following are the fields you can search for using Advanced Search. Note that
 
 <tr>
 <td><p>CAGE/NCAGE code</p></td>
-<td valign="top" ><p>The Contractor and Government Entity (CAGE) Code or NATO </p>
-
-<p>Commercial and </p>
-
-<p>Government Entity (NCAGE) Code. This number is assigned to the registration if one does not already exist.</p></td>
+<td valign="top" ><p>The Contractor and Government Entity (CAGE) Code or NATO Commercial and Government Entity (NCAGE) Code. This number is assigned to the registration if one does not already exist.</p></td>
 <td><p>cage</p></td>
 <td valign="top" > </td>
 </tr>
@@ -136,9 +132,7 @@ The following are the fields you can search for using Advanced Search. Note that
 
 <tr>
 <td><p>Minority Owned Business</p></td>
-<td valign="top" ><p>A minority business is defined as a business in which more than 51% of the interest, stock and otherwise, is owned by minority group members. If you select this category, you will need to select a subcategory that best represents the persons who hold primary ownership. Subcategories include Asian-Pacific American Owned, Subcontinent Asian (Asian Indian) Owned, Black American Owned, Hispanic American Owned, Native </p>
-
-<p>American Owned, or Other.</p></td>
+<td valign="top" ><p>A minority business is defined as a business in which more than 51% of the interest, stock and otherwise, is owned by minority group members. If you select this category, you will need to select a subcategory that best represents the persons who hold primary ownership. Subcategories include Asian-Pacific American Owned, Subcontinent Asian (Asian Indian) Owned, Black American Owned, Hispanic American Owned, Native American Owned, or Other.</p></td>
 <td><p>minorityOwned</p></td>
 <td><p>true or false</p></td>
 </tr>
@@ -154,9 +148,7 @@ The following are the fields you can search for using Advanced Search. Note that
 <td><p>Veteran Owned Business</p></td>
 <td valign="top" ><p>Veteran-Owned Business means a business that (1) not less than 51 percent of which is owned by one or more veterans (as defined at 38 U.S.C. 101(2)) or, in the case of any publicly owned business, not less than 51 percent of the stock of which is owned by one or more veterans; and (2) the management and daily business operations of which are controlled by one or more veterans. For more information please see: </p>
 
-<p>http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCOD</p>
-
-<p>E-2011-title38.pdf.</p></td>
+<p>http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf.</p></td>
 <td><p>veteranOwned</p></td>
 <td><p>true or false</p></td>
 </tr>
@@ -164,9 +156,7 @@ The following are the fields you can search for using Advanced Search. Note that
 <tr>
 <td><p>Service Disabled Veteran Owned</p></td>
 <td valign="top" ><p>Service Disabled Veteran Owned Business means a business that (i) not less than 51 percent of which is owned by one or more service-disabled veterans or, in the case of any publicly owned business, not less 
-than 51 percent of the stock of which is owned by one or more service-disabled veterans; and (ii) the management and daily business operations of which are controlled by one or more service-disabled veterans or, in the case of a service-disabled veteran with permanent and severe disability, the spouse or permanent caregiver of such veteran. “Service-disabled veteran” means a veteran, as defined in 38 U.S.C. 101(2), with a disability that is service-connected, as defined in 38 U.S.C. 101(16). F</p>
-
-<p>or more information please see: http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf</p></td>
+than 51 percent of the stock of which is owned by one or more service-disabled veterans; and (ii) the management and daily business operations of which are controlled by one or more service-disabled veterans or, in the case of a service-disabled veteran with permanent and severe disability, the spouse or permanent caregiver of such veteran. “Service-disabled veteran” means a veteran, as defined in 38 U.S.C. 101(2), with a disability that is service-connected, as defined in 38 U.S.C. 101(16). For more information please see: http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf</p></td>
 <td><p>serviceDisabledVeteranOwned</p></td>
 <td><p>true or false</p></td>
 </tr>
