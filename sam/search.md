@@ -387,8 +387,10 @@ There are certain tips to note in order to construct an API search URL properly.
 2. Commas must be omitted from search terms
 
 3. Boolean based search fields must be grouped together at the front of a URL:
-* Note: If your search includes ‘Disaster Response Contractor, the disasterResponse search field must be the last Boolean search field in the group
-* Example: qterms=womanOwnedBusiness:true+AND+sba8AProgram:
+
+Note: If your search includes ‘Disaster Response Contractor, the disasterResponse search field must be the last Boolean search field in the group  
+  
+Example: qterms=womanOwnedBusiness:true+AND+sba8AProgram:
 true+AND+disasterResponse:true+AND+legalBusinessName:cats
 
 4. There should only be one space (‘+’) between each term and in between “AND” and “OR”
