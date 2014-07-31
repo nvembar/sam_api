@@ -224,18 +224,17 @@ than 51 percent of the stock of which is owned by one or more service-disabled v
 
 ##### Codes for Purpose of registration
 
-<ul>
-<li>Z1 - Federal AssistanceAwards</li>     
-<li>Z2 - All Awards</li>
-<li>Z4 - AssistanceAwards & IGT</li>
-<li>Z5 - All Awards & IGT</li></ul> 
+* Z1 - Federal AssistanceAwards   
+* Z2 - All Awards
+* Z4 - AssistanceAwards & IGT
+* Z5 - All Awards & IGT
 
 ##### Codes for registration status
 
-<ul><li>A - Active</li>
-<li>W - Work in Progress</li>
-<li>S - Submitted</li>
-<li>I - Inactive</li></ul> 
+* A - Active
+* W - Work in Progress
+* S - Submitted
+* I - Inactive
 
 **API Search Output:**
 
