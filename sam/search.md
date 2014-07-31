@@ -318,10 +318,12 @@ The search results that match the searched condition will be displayed in JSON f
 
 **The JSON result will return as follows:**
 
+````
 {"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL","line1":"1234 M St","city":
 "Chicago","country":"USA"},"expirationDate":"2015-03-24 13:56:45.000",
 "status":"Active","hasDelinquentFederalDebt":false,"duns":"123456789","links":[{"rel":"details","href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],"dunsPlus4":"0000","legalBusinessName":"Sample Company LLC","cage":"12345"}],"links":[{"rel":"self","href":
 "http://api.data.gov/samsearch/v1/registrations?qterms=123456789&start=1&length=10"}]}
+````
 
 **Pagination**
 
