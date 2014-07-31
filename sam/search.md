@@ -362,6 +362,7 @@ Example:
 Terms can be grouped against the same API advanced search field by using commas between each term.
 
 Examples:
+
 * [https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333)](https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333))  
 * [https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06)](https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06))  
 * [https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331)](https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331))  
@@ -369,11 +370,13 @@ Examples:
 Note: For terms having the first character as alpha, you must insert a + symbol after each comma (exception is samAddress.country).
 
 Examples:
+
 * [https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:(wood,+moore,+general,+temme,+whitney)]()
 * [https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.city:(Moscow,+Oslo,+Geneva)]()
 * [https://test.sam.gov/samsearch/v1/registrations?qterms=naicsAnySize:(111332,336413)+AND+samAddress.city:(Napa,+Loire)]()
 
 Exception: 
+  
 * [https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)](https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL))
 
 
@@ -399,4 +402,5 @@ true+AND+disasterResponse:true+AND+legalBusinessName:cats
 6) When grouping Legal Business Name and Country in an advanced search, the term legalBusinessName must come before samAddress.country.
 
 Example:
+
 * [https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ](https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ)
