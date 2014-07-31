@@ -317,7 +317,7 @@ The search results that match the searched condition will be displayed in JSON f
 
 **The JSON result will return as follows:**
 
-````
+<pre>
 {"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL",
 "line1":"1234 M St","city":
 "Chicago","country":"USA"},"expirationDate":"2015-03-24 13:56:45.000",
@@ -325,78 +325,78 @@ The search results that match the searched condition will be displayed in JSON f
 "links":[{"rel":"details","href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],
 "dunsPlus4":"0000","legalBusinessName":"Sample Company LLC","cage":"12345"}],"links":[{"rel":"self","href":
 "http://api.data.gov/samsearch/v1/registrations?qterms=123456789&start=1&length=10"}]}
-````
+</pre>
 
 **Pagination**
 
 The results will be defaulted to 10 records per JSON page. An API developer can navigate between pages by using the Self, Previous, First, and Next links (as appropriate depending on the number of records) at the end of each page.
 
-````
+<pre>
 "links":[{"rel":"self","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=11&length=10"},
 {"rel":"prev","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
 {"rel":"first","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
 {"rel":"next","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
-````
+</pre>
 
 An API developer can change the number of records returned per page by manipulating the start and length parameters at the end of the API search URL like so:
 
-* http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25
+* [http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25](http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25)  
 
 **Connecting Search Fields**
 
 Plus signs '+’ should be used as spaces between terms. ‘+AND+’ and ‘+OR+’ are always used to join two terms like a boolean AND and OR.
 
-* https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:University+of+Pongo
-* https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO
-* https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true
+* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:University+of+Pongo](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:University+of+Pongo)  
+* [https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO](https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO)  
+* [https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true](https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true)  
 
 If your search term contains the word(s) ‘and’ or ‘or’, you must not capitalize it.
 
 Example:
 
-* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company)
-* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals)
+* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company)  
+* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals)  
 
 **Grouping Search Terms**
 
 Terms can be grouped against the same API advanced search field by using commas between each term.
 
 Examples:
-* https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333)
-* https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06)
-* https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331)
+* [https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333)](https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333))  
+* [https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06)](https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06))  
+* [https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331)](https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331))  
 
 Note: For terms having the first character as alpha, you must insert a + symbol after each comma (exception is samAddress.country).
 
 Examples:
-* https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:(wood,+moore,+general,+temme,+whitney)
-* https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.city:(Moscow,+Oslo,+Geneva)
-* https://test.sam.gov/samsearch/v1/registrations?qterms=naicsAnySize:(111332,336413)+AND+samAddress.city:(Napa,+Loire)
+* [https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:(wood,+moore,+general,+temme,+whitney)]()
+* [https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.city:(Moscow,+Oslo,+Geneva)]()
+* [https://test.sam.gov/samsearch/v1/registrations?qterms=naicsAnySize:(111332,336413)+AND+samAddress.city:(Napa,+Loire)]()
 
 Exception: 
-* https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)
+* [https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)](https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL))
 
 
 **TIPS/HINTS**
 
 There are certain tips to note in order to construct an API search URL properly. We have listed several below. If you discover others as you work with our API, please add them to the ‘Feedback’ section of this GitHub site.
 
-1. Any query terms with special characters must include double quotes: q= “ZY’Z”
+1) Any query terms with special characters must include double quotes: q= “ZY’Z”
 	Note:  %26 can be used for ampersand ‘&’
 
-2. Commas must be omitted from search terms
+2) Commas must be omitted from search terms
 
-3. Boolean based search fields must be grouped together at the front of a URL:
+3) Boolean based search fields must be grouped together at the front of a URL:
 
 Note: If your search includes ‘Disaster Response Contractor, the disasterResponse search field must be the last Boolean search field in the group  
   
 Example: qterms=womanOwnedBusiness:true+AND+sba8AProgram:
 true+AND+disasterResponse:true+AND+legalBusinessName:cats
 
-4. There should only be one space (‘+’) between each term and in between “AND” and “OR”
-5. Quick Search does not allow grouping
+4) There should only be one space (‘+’) between each term and in between “AND” and “OR”
+5) Quick Search does not allow grouping
 
-6. When grouping Legal Business Name and Country in an advanced search, the term legalBusinessName must come before samAddress.country.
+6) When grouping Legal Business Name and Country in an advanced search, the term legalBusinessName must come before samAddress.country.
 
 Example:
-* https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ
+* [https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ](https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ)
