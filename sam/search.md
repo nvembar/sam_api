@@ -318,7 +318,8 @@ The search results that match the searched condition will be displayed in JSON f
 **The JSON result will return as follows:**
 
 ````
-{"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL","line1":"1234 M St","city":
+{"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL",
+"line1":"1234 M St","city":
 "Chicago","country":"USA"},"expirationDate":"2015-03-24 13:56:45.000",
 "status":"Active","hasDelinquentFederalDebt":false,"duns":"123456789",
 "links":[{"rel":"details","href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],
@@ -386,8 +387,8 @@ There are certain tips to note in order to construct an API search URL properly.
 2. Commas must be omitted from search terms
 
 3. Boolean based search fields must be grouped together at the front of a URL:
-> Note: If your search includes ‘Disaster Response Contractor, the disasterResponse search field must be the last Boolean search field in the group
-> Example: qterms=womanOwnedBusiness:true+AND+sba8AProgram:
+* Note: If your search includes ‘Disaster Response Contractor, the disasterResponse search field must be the last Boolean search field in the group
+* Example: qterms=womanOwnedBusiness:true+AND+sba8AProgram:
 true+AND+disasterResponse:true+AND+legalBusinessName:cats
 
 4. There should only be one space (‘+’) between each term and in between “AND” and “OR”
