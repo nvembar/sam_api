@@ -320,7 +320,9 @@ The search results that match the searched condition will be displayed in JSON f
 ````
 {"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL","line1":"1234 M St","city":
 "Chicago","country":"USA"},"expirationDate":"2015-03-24 13:56:45.000",
-"status":"Active","hasDelinquentFederalDebt":false,"duns":"123456789","links":[{"rel":"details","href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],"dunsPlus4":"0000","legalBusinessName":"Sample Company LLC","cage":"12345"}],"links":[{"rel":"self","href":
+"status":"Active","hasDelinquentFederalDebt":false,"duns":"123456789",
+"links":[{"rel":"details","href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],
+"dunsPlus4":"0000","legalBusinessName":"Sample Company LLC","cage":"12345"}],"links":[{"rel":"self","href":
 "http://api.data.gov/samsearch/v1/registrations?qterms=123456789&start=1&length=10"}]}
 ````
 
@@ -329,7 +331,10 @@ The search results that match the searched condition will be displayed in JSON f
 The results will be defaulted to 10 records per JSON page. An API developer can navigate between pages by using the Self, Previous, First, and Next links (as appropriate depending on the number of records) at the end of each page.
 
 ````
-"links":[{"rel":"self","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=11&length=10"},{"rel":"prev","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},{"rel":"first","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},{"rel":"next","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
+"links":[{"rel":"self","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=11&length=10"},
+{"rel":"prev","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
+{"rel":"first","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
+{"rel":"next","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
 ````
 
 An API developer can change the number of records returned per page by manipulating the start and length parameters at the end of the API search URL like so:
@@ -348,8 +353,8 @@ If your search term contains the word(s) ‘and’ or ‘or’, you must not cap
 
 Example:
 
-* https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company 
-* https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals 
+* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company)
+* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals)
 
 **Grouping Search Terms**
 
@@ -367,7 +372,8 @@ Examples:
 * https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.city:(Moscow,+Oslo,+Geneva)
 * https://test.sam.gov/samsearch/v1/registrations?qterms=naicsAnySize:(111332,336413)+AND+samAddress.city:(Napa,+Loire)
 
-Exception: https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)
+Exception: 
+* https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)
 
 
 **TIPS/HINTS**
@@ -380,8 +386,8 @@ There are certain tips to note in order to construct an API search URL properly.
 2. Commas must be omitted from search terms
 
 3. Boolean based search fields must be grouped together at the front of a URL:
-Note: If your search includes ‘Disaster Response Contractor, the disasterResponse search field must be the last Boolean search field in the group
-Example: qterms=womanOwnedBusiness:true+AND+sba8AProgram:
+> Note: If your search includes ‘Disaster Response Contractor, the disasterResponse search field must be the last Boolean search field in the group
+> Example: qterms=womanOwnedBusiness:true+AND+sba8AProgram:
 true+AND+disasterResponse:true+AND+legalBusinessName:cats
 
 4. There should only be one space (‘+’) between each term and in between “AND” and “OR”
@@ -390,4 +396,4 @@ true+AND+disasterResponse:true+AND+legalBusinessName:cats
 6. When grouping Legal Business Name and Country in an advanced search, the term legalBusinessName must come before samAddress.country.
 
 Example:
-https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ
+* https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ
