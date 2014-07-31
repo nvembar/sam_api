@@ -328,48 +328,44 @@ The search results that match the searched condition will be displayed in JSON f
 
 The results will be defaulted to 10 records per JSON page. An API developer can navigate between pages by using the Self, Previous, First, and Next links (as appropriate depending on the number of records) at the end of each page.
 
+````
 "links":[{"rel":"self","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=11&length=10"},{"rel":"prev","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},{"rel":"first","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},{"rel":"next","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
+````
 
 An API developer can change the number of records returned per page by manipulating the start and length parameters at the end of the API search URL like so:
 
-http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25
+* http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25
 
 **Connecting Search Fields**
 
 Plus signs '+’ should be used as spaces between terms. ‘+AND+’ and ‘+OR+’ are always used to join two terms like a boolean AND and OR.
 
-https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:University+of+Pongo
-
-https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO
-
-https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true
+* https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:University+of+Pongo
+* https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO
+* https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true
 
 If your search term contains the word(s) ‘and’ or ‘or’, you must not capitalize it.
 
 Example:
-https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company 
 
-https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals 
+* https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company 
+* https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals 
 
 **Grouping Search Terms**
 
 Terms can be grouped against the same API advanced search field by using commas between each term.
 
 Examples:
-https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333)
-
-https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06)
-
-https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331)
+* https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333)
+* https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06)
+* https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331)
 
 Note: For terms having the first character as alpha, you must insert a + symbol after each comma (exception is samAddress.country).
 
 Examples:
-https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:(wood,+moore,+general,+temme,+whitney)
-
-https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.city:(Moscow,+Oslo,+Geneva)
-
-https://test.sam.gov/samsearch/v1/registrations?qterms=naicsAnySize:(111332,336413)+AND+samAddress.city:(Napa,+Loire)
+* https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:(wood,+moore,+general,+temme,+whitney)
+* https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.city:(Moscow,+Oslo,+Geneva)
+* https://test.sam.gov/samsearch/v1/registrations?qterms=naicsAnySize:(111332,336413)+AND+samAddress.city:(Napa,+Loire)
 
 Exception: https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)
 
