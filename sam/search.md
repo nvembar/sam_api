@@ -317,7 +317,7 @@ The search results that match the searched condition will be displayed in JSON f
 
 **The JSON result will return as follows:**
 
-````
+<pre>
 {"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL",
 "line1":"1234 M St","city":
 "Chicago","country":"USA"},"expirationDate":"2015-03-24 13:56:45.000",
@@ -325,18 +325,18 @@ The search results that match the searched condition will be displayed in JSON f
 "links":[{"rel":"details","href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],
 "dunsPlus4":"0000","legalBusinessName":"Sample Company LLC","cage":"12345"}],"links":[{"rel":"self","href":
 "http://api.data.gov/samsearch/v1/registrations?qterms=123456789&start=1&length=10"}]}
-````
+</pre>
 
 **Pagination**
 
 The results will be defaulted to 10 records per JSON page. An API developer can navigate between pages by using the Self, Previous, First, and Next links (as appropriate depending on the number of records) at the end of each page.
 
-````
+<pre>
 "links":[{"rel":"self","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=11&length=10"},
 {"rel":"prev","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
 {"rel":"first","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
 {"rel":"next","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
-````
+</pre>
 
 An API developer can change the number of records returned per page by manipulating the start and length parameters at the end of the API search URL like so:
 
