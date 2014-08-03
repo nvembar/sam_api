@@ -177,8 +177,9 @@
     },
     "businessTypes": {
       "type": "array",
-      "description": "An array of business types determined by SBA or Ability One",
-			"could_be": "[\"ZZ\", \"2R\"]"
+      "description": "An array of business types determined by SBA or Ability One.",
+			"could_be": "[\"ZZ\", \"2R\"]",
+			"url": "codes.html#businessTypes"
     },
     "disasterRelief": {
       "type": "array",
