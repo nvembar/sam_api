@@ -4,19 +4,24 @@ layout: default
 
 ---
 
+### SAM Search API
+
 **NOTE: All the documentation on this page refers to the October release of the SAM API**
 
 As part of the next SAM quarterly release, the SAM API service will expand to include the functionality for Search. The SAM Search API has been developed to mimic the Search functionality that is currently available from the SAM website.
 The Search API provides the opportunity to perform a search transaction in the following two options. Quick Search takes a single search term provided by the user and compares it to a set of predefined database fields. Advanced Search allows the user to search by entering a value that is then used to search a user selected predefined search category. 
+
 Notice that we are implementing this through a JSON-based “hypermedia as the engine of application state” (HATEOAS with the appropriate links object within the result set). The intent going forward will be to use this model to allow for a scalable architecture of IAE’s APIs to be built. 
+
 Note:  Don’t try to construct links yourself based on the patterns you see in the links object. Assume that those patterns could change. We will account for this requirement as we implement our rate-limiting for the API.
 
-**Searching SAM using the API**
+#### Searching SAM using the API
 
-**Quick Search:**
+##### Quick Search:
+
 The Quick Search functionality allows a user to enter a single term which is then queried against six fields in the SAM database. The results should return the same entities, grantees, and other registrants in SAM that are found when you do a “Quick Search” on SAM itself.
 
-Example: https://api.data.gov/samsearch/v1/registrations?qterms=GSA
+Example: ```https://api.data.gov/samsearch/v1/registrations?qterms=GSA&api_key=YOUR_KEY```
 The Search API will then query the SAM database and display any registrant that matches the user selected search term contained in any of the following fields: 
 
 
@@ -30,22 +35,26 @@ The Search API will then query the SAM database and display any registrant that 
 |DoDAAC|
 
 
-**Note** that the search will automatically add a wildcard to the end of any term passed in quick search. So qterms=Rob will match “Robot Co., Inc.”
+**Note** that the search will automatically add a wildcard to the end of any term passed in quick search. So ```qterms=Rob``` will match “Robot Co., Inc.”
 
-**Advanced Search:**
+##### Advanced Search:
+
 The Advanced Search functionality allows a user to enter criteria or a value and a category which is then used to query the database to return all registrations that match that selection criterion. In Advanced Search users are able to string multiple criteria and categories to better refine their search and return a more specific list of registrations.
+
 Advanced Search uses the same qterms construct that we used for quick search, but follows more closely to the Lucene-based syntax for querying by specific terms. It is not exactly the same, but should be familiar for anyone who is used to that syntax.
 
 As a basic example, if you want to make sure you’re searching only Legal Business Name, you can run the following search:
-https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated)
-The search terms will be in parentheses. You can group AND and OR search terms together by putting the terms AND or OR between terms, separated by spaces. (Eventually, they will be separated by + signs because of some ambiguities in the syntax, but for the moment, use spaces.)
-For example a user can search for an entity that has a Legal Business Name that includes the term “incorporated” AND has selected the NAICS Code of 123456 for which they are considered to be a Small Business for. 
-https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated) AND (naicsLimitedSB:12345)
+```https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated)```
 
-**Advanced search fields**
+The search terms will be in parentheses. You can group AND and OR search terms together by putting the terms AND or OR between terms, separated by + signs.
+For example a user can search for an entity that has a Legal Business Name that includes the term “incorporated” AND has selected the NAICS Code of 123456 for which they are considered to be a Small Business for. 
+```https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated)+AND+(naicsLimitedSB:12345)```
+
+##### Advanced search fields
+
 The following are the fields you can search for using Advanced Search. Note that, where appropriate, we have used the same field name as the JSON output from the detailed results of the API. Some of them, like minorityOwned are interpreted appropriately.
 
-#### Functional search fields
+##### Functional search fields
 <table border="1" cellspacing="0" cellpadding="0" > 
 <tbody>
 <tr>
@@ -318,13 +327,27 @@ The search results that match the searched condition will be displayed in JSON f
 **The JSON result will return as follows:**
 
 <pre>
-{"results":[{"hasKnownExclusion":false,"samAddress":{"zip":"12345","zip4":"3800","stateOrProvince":"IL",
-"line1":"1234 M St","city":
-"Chicago","country":"USA"},"expirationDate":"2015-03-24 13:56:45.000",
-"status":"Active","hasDelinquentFederalDebt":false,"duns":"123456789",
-"links":[{"rel":"details","href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],
-"dunsPlus4":"0000","legalBusinessName":"Sample Company LLC","cage":"12345"}],"links":[{"rel":"self","href":
-"http://api.data.gov/samsearch/v1/registrations?qterms=123456789&start=1&length=10"}]}
+{"results":[
+  { "hasKnownExclusion":false,
+    "samAddress": 
+       { "zip": "12345",
+         "zip4": "3800",
+         "stateOrProvince": "IL",
+         "line1": "1234 M St",
+         "city": "Chicago","country":"USA"},
+    "expirationDate":"2015-03-24 13:56:45.000",
+    "status":"Active",
+    "hasDelinquentFederalDebt":false,
+    "duns":"123456789",
+    "links":[
+       { "rel":"details",
+         "href":"http://api.data.gov/samdata/v1/registrations/1234567890000"}],
+    "dunsPlus4":"0000",
+    "legalBusinessName":"Sample Company LLC",
+    "cage":"12345"}],
+    "links":[
+       { "rel" : "self",
+         "href": "http://api.data.gov/samsearch/v1/registrations?qterms=123456789&start=1&length=10"}]}
 </pre>
 
 **Pagination**
@@ -332,10 +355,15 @@ The search results that match the searched condition will be displayed in JSON f
 The results will be defaulted to 10 records per JSON page. An API developer can navigate between pages by using the Self, Previous, First, and Next links (as appropriate depending on the number of records) at the end of each page.
 
 <pre>
-"links":[{"rel":"self","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=11&length=10"},
-{"rel":"prev","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
-{"rel":"first","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
-{"rel":"next","href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
+"links":[
+  {"rel": "self",
+   "href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=11&length=10"},
+  {"rel": "prev",
+   "href": "http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
+  {"rel": "first",
+   "href": "http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
+  {"rel": "next",
+   "href": "http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
 </pre>
 
 An API developer can change the number of records returned per page by manipulating the start and length parameters at the end of the API search URL like so:
@@ -357,7 +385,7 @@ Example:
 * [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company)  
 * [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals)  
 
-**Grouping Search Terms**
+##### Grouping Search Terms
 
 Terms can be grouped against the same API advanced search field by using commas between each term.
 
@@ -380,7 +408,7 @@ Exception:
 * [https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)](https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL))
 
 
-**TIPS/HINTS**
+##### TIPS/HINTS
 
 There are certain tips to note in order to construct an API search URL properly. We have listed several below. If you discover others as you work with our API, please add them to the ‘Feedback’ section of this GitHub site.
 
