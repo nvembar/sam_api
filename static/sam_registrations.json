@@ -28,7 +28,8 @@
     "purposeOfRegistration": {
       "type": "string",
       "description": "Indicates whether the entity is seeking contracts, grants, or intergovernmental transfers. XXX Need table of codes XXX",
-			"could_be": "XXX Need codes XXX"
+			"could_be": "Z1",
+			"url": "codes.html#purposeTypes"
     },
     "registrationDate": {
       "type": "date",
