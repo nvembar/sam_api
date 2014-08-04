@@ -29,7 +29,7 @@ $(function() {
         var info = fields[fieldName];
 				var description = "<td>" + info['description'] + "<p><p><em>Could be: </em><code>" + info['could_be'] + "</code>";
 				if (info['url'] != null) {
-					description += "<p><a href='" + info['url'] + "'>Code Values</a>";
+					description += "<p><a href='" + info['url'] + "'>More Info</a>";
 				}
 				description += "</td>";
         var $row = $("<tr></tr>");
