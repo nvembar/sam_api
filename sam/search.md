@@ -371,7 +371,7 @@ An API developer can change the number of records returned per page by manipulat
 * [http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25](http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25)  
 * 
 
-The maximium page size is 100. If more than 100 entities are requested, the API will only return 100 per page without error.
+The maximium page size is 500. If more than 500 entities are requested, the API will only return 500 per page without error.
 
 **Connecting Search Fields**
 
