@@ -369,6 +369,9 @@ The results will be defaulted to 10 records per JSON page. An API developer can 
 An API developer can change the number of records returned per page by manipulating the start and length parameters at the end of the API search URL like so:
 
 * [http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25](http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25)  
+* 
+
+The maximium page size is 100. If more than 100 entities are requested, the API will only return 100 per page without error.
 
 **Connecting Search Fields**
 
@@ -419,12 +422,13 @@ There are certain tips to note in order to construct an API search URL properly.
 
 3) Boolean based search fields must be grouped together at the front of a URL:
 
-Note: If your search includes ‘Disaster Response Contractor, the disasterResponse search field must be the last Boolean search field in the group  
+Note: If your search includes 'Disaster Response Contractor', the disasterResponse search field must be the last Boolean search field in the group  
   
 Example: qterms=womanOwnedBusiness:true+AND+sba8AProgram:
 true+AND+disasterResponse:true+AND+legalBusinessName:cats
 
 4) There should only be one space (‘+’) between each term and in between “AND” and “OR”
+
 5) Quick Search does not allow grouping
 
 6) When grouping Legal Business Name and Country in an advanced search, the term legalBusinessName must come before samAddress.country.
