@@ -54,7 +54,7 @@
     "legalBusinessName": {
       "type": "string",
       "description": "The legal business name of the entity.",
-			"could_be": "APPLE COMPUTER INC"
+			"could_be": "ACME INC"
     },
     "doingBusinessAsName": {
       "type": "string",
