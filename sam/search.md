@@ -35,7 +35,7 @@ The Search API will then query the SAM database and display any registrant that 
 |DoDAAC|
 
 
-**Note** that the search will automatically add a wildcard to the end of any term passed in quick search. So ```qterms=Rob``` will match “Robot Co., Inc.”
+**Note** that the search will automatically add a wildcard to the end of any term that is three or more charcters passed in quick search. So ```qterms=Rob``` will match “Robot Co., Inc.”
 
 ##### Advanced Search:
 
@@ -44,13 +44,13 @@ The Advanced Search functionality allows a user to enter criteria or a value and
 Advanced Search uses the same qterms construct that we used for quick search, but follows more closely to the Lucene-based syntax for querying by specific terms. It is not exactly the same, but should be familiar for anyone who is used to that syntax.
 
 As a basic example, if you want to make sure you’re searching only Legal Business Name, you can run the following search:
-```https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated)```
+```https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:incorporated```
 
 The search terms will be in parentheses. You can group AND and OR search terms together by putting the terms AND or OR between terms, separated by + signs.
 For example a user can search for an entity that has a Legal Business Name that includes the term “incorporated” AND has selected the NAICS Code of 123456 for which they are considered to be a Small Business for. 
 ```https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated)+AND+(naicsLimitedSB:12345)```
 
-##### Advanced search fields
+##### Advanced search results fields
 
 The following are the fields you can search for using Advanced Search. Note that, where appropriate, we have used the same field name as the JSON output from the detailed results of the API. Some of them, like minorityOwned are interpreted appropriately.
 
@@ -366,12 +366,12 @@ The results will be defaulted to 10 records per JSON page. An API developer can 
    "href": "http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
 </pre>
 
-An API developer can change the number of records returned per page by manipulating the start and length parameters at the end of the API search URL like so:
+An API developer can change the first record of the page and the number of records returned on the page by manipulating the start and length parameters at the end of the API search URL like so:
 
 * [http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25](http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25)  
 * 
 
-The maximium page size is 500. If more than 500 entities are requested, the API will only return 500 per page without error.
+Note: The maximium page size is 500. If more than 500 entities are requested, the API will only return 500 per page without error.
 
 **Connecting Search Fields**
 
@@ -381,7 +381,7 @@ Plus signs '+’ should be used as spaces between terms. ‘+AND+’ and ‘+OR+
 * [https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO](https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO)  
 * [https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true](https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true)  
 
-If your search term contains the word(s) ‘and’ or ‘or’, you must not capitalize it.
+Note: If your search term contains the word(s) ‘and’ or ‘or’, you must not capitalize it.
 
 Example:
 
@@ -431,7 +431,9 @@ true+AND+disasterResponse:true+AND+legalBusinessName:cats
 
 5) Quick Search does not allow grouping
 
-6) When grouping Legal Business Name and Country in an advanced search, the term legalBusinessName must come before samAddress.country.
+6) When searching on samAddress.country, it can be entered as either a 2- or 3-character ISO-3166 codes.
+
+7) When grouping Legal Business Name and Country in an advanced search, the term legalBusinessName must come before samAddress.country.
 
 Example:
 
