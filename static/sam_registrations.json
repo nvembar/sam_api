@@ -27,8 +27,9 @@
     },
     "purposeOfRegistration": {
       "type": "string",
-      "description": "Indicates whether the entity is seeking contracts, grants, or intergovernmental transfers. XXX Need table of codes XXX",
-			"could_be": "XXX Need codes XXX"
+      "description": "Indicates whether the entity is seeking contracts, grants, or intergovernmental transfers.", 
+			"could_be": "Z1",
+			"url": "codes.html#purposeTypes"
     },
     "registrationDate": {
       "type": "date",
@@ -53,7 +54,7 @@
     "legalBusinessName": {
       "type": "string",
       "description": "The legal business name of the entity.",
-			"could_be": "APPLE COMPUTER INC"
+			"could_be": "ACME INC"
     },
     "doingBusinessAsName": {
       "type": "string",
@@ -73,7 +74,8 @@
     "samAddress": {
       "type": "object",
       "description": "The address provided by the entity for contact",
-			"could_be": "XXX Show address XXX"
+			"could_be": "See below",
+			"url": "#addressObject"
     },
     "congressionalDistrict": {
       "type": "string",
@@ -108,7 +110,8 @@
     "mailingAddress": {
       "type": "object",
       "description": "The mailing address for the entity",
-			"could_be": "XXX show address structure XXX"
+			"could_be": "See below",
+			"url": "#addressObject"
     },
     "stateOfIncorporation": {
       "type": "string",
@@ -123,32 +126,38 @@
     "govtBusinessPoc": {
         "type": "object",
         "description": "The point of contact for government business within the entity",
-				"could_be": "XXX POC Object XXX"
+				"could_be": "See below",
+				"url": "#pocObject"
     },
     "altGovtBusinessPoc": {
         "type": "object",
         "description": "The alternate point of contact for government business within the entity",
-				"could_be": "XXX POC Object XXX"
+				"could_be": "See below",
+				"url": "#pocObject"
     },
     "pastPerformancePoc": {
         "type": "object",
         "description": "The point of contact for past performance information for business within the entity",
-				"could_be": "XXX POC Object XXX"
+				"could_be": "See below",
+				"url": "#pocObject"
     },
     "altPastPerformancePoc": {
         "type": "object",
         "description": "The alternate point of contact for past performance information for business within the entity",
-				"could_be": "XXX POC Object XXX"
+				"could_be": "See below",
+				"url": "#pocObject"
     },
     "electronicBusinessPoc": {
         "type": "object",
         "description": "The point of contact for electronic business transactions within the entity",
-				"could_be": "XXX POC Object XXX"
+				"could_be": "See below",
+				"url": "#pocObject"
     },
     "altElectronicBusinessPoc": {
         "type": "object",
         "description": "The alternate point of contact for electronic business transactions within the entity",
-				"could_be": "XXX POC Object XXX"
+				"could_be": "See below",
+				"url": "#pocObject"
     },
     "creditCardUsage": {
       "type": "boolean",
@@ -177,8 +186,9 @@
     },
     "businessTypes": {
       "type": "array",
-      "description": "An array of business types determined by SBA or Ability One",
-			"could_be": "[\"ZZ\", \"2R\"]"
+      "description": "An array of business types determined by SBA or Ability One.",
+			"could_be": "[\"ZZ\", \"2R\"]",
+			"url": "codes.html#businessTypes"
     },
     "disasterRelief": {
       "type": "array",
@@ -187,8 +197,9 @@
     },
     "pscCodes": {
       "type": "array",
-      "description": "The Product Service Codes, described by objects, which the entity supports",
-			"could_be": "XXX Need this XXX"
+      "description": "The Product Service Codes, described by objects, which the entity supports. The 'More info' link takes you to the PSC manual",
+			"could_be": "1510",
+			"url": "http://www.acquisition.gov/PSC%20Manual%20-%20Final%20-%2011%20August%202011.pdf"
     },
     "certifications": {
       "type": "object",

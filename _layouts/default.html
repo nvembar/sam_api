@@ -43,5 +43,10 @@
     </footer>
   <script src="../static/js/docs.min.js"></script>
   <script type="text/javascript" src="../static/js/expandables.js"></script>
+	{% if page.script %}
+		<script type="text/javascript">
+			{{ page.script }}
+		</script>
+  {% endif %}
 </body>
 </html>
