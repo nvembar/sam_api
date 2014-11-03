@@ -21,7 +21,7 @@ Note:  Don’t try to construct links yourself based on the patterns you see in 
 
 The Quick Search functionality allows a user to enter a single term which is then queried against six fields in the SAM database. The results should return the same entities, grantees, and other registrants in SAM that are found when you do a “Quick Search” on SAM itself.
 
-Example: ```https://api.data.gov/samsearch/v1/registrations?qterms=GSA&api_key=YOUR_KEY```
+Example: ```https://api.data.gov/sam/v1/registrations?qterms=GSA&api_key=YOUR_KEY```
 The Search API will then query the SAM database and display any registrant that matches the user selected search term contained in any of the following fields: 
 
 
@@ -44,11 +44,11 @@ The Advanced Search functionality allows a user to enter criteria or a value and
 Advanced Search uses the same qterms construct that we used for quick search, but follows more closely to the Lucene-based syntax for querying by specific terms. It is not exactly the same, but should be familiar for anyone who is used to that syntax.
 
 As a basic example, if you want to make sure you’re searching only Legal Business Name, you can run the following search:
-```https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:incorporated```
+```https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:incorporated```
 
 The search terms will be in parentheses. You can group AND and OR search terms together by putting the terms AND or OR between terms, separated by + signs.
 For example a user can search for an entity that has a Legal Business Name that includes the term “incorporated” AND has selected the NAICS Code of 123456 for which they are considered to be a Small Business for. 
-```https://api.data.gov/samsearch/v1/registrations?qterms=(legalBusinessName:incorporated)+AND+(naicsLimitedSB:12345)```
+```https://api.data.gov/sam/v1/registrations?qterms=(legalBusinessName:incorporated)+AND+(naicsLimitedSB:12345)```
 
 ##### Advanced search results fields
 
@@ -163,7 +163,7 @@ The following are the fields you can search for using Advanced Search. Note that
 <td><p>Veteran Owned Business</p></td>
 <td valign="top" ><p>Veteran-Owned Business means a business that (1) not less than 51 percent of which is owned by one or more veterans (as defined at 38 U.S.C. 101(2)) or, in the case of any publicly owned business, not less than 51 percent of the stock of which is owned by one or more veterans; and (2) the management and daily business operations of which are controlled by one or more veterans. For more information please see: </p>
 
-<p>http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf.</p></td>
+<p><a href="http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf">http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf.</a></p></td>
 <td><p>veteranOwned</p></td>
 <td><p>true or false</p></td>
 </tr>
@@ -171,7 +171,7 @@ The following are the fields you can search for using Advanced Search. Note that
 <tr>
 <td><p>Service Disabled Veteran Owned</p></td>
 <td valign="top" ><p>Service Disabled Veteran Owned Business means a business that (i) not less than 51 percent of which is owned by one or more service-disabled veterans or, in the case of any publicly owned business, not less 
-than 51 percent of the stock of which is owned by one or more service-disabled veterans; and (ii) the management and daily business operations of which are controlled by one or more service-disabled veterans or, in the case of a service-disabled veteran with permanent and severe disability, the spouse or permanent caregiver of such veteran. “Service-disabled veteran” means a veteran, as defined in 38 U.S.C. 101(2), with a disability that is service-connected, as defined in 38 U.S.C. 101(16). For more information please see: http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf</p></td>
+than 51 percent of the stock of which is owned by one or more service-disabled veterans; and (ii) the management and daily business operations of which are controlled by one or more service-disabled veterans or, in the case of a service-disabled veteran with permanent and severe disability, the spouse or permanent caregiver of such veteran. “Service-disabled veteran” means a veteran, as defined in 38 U.S.C. 101(2), with a disability that is service-connected, as defined in 38 U.S.C. 101(16). For more information please see: <a href="http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf">http://www.gpo.gov/fdsys/pkg/USCODE-2011-title38/pdf/USCODE-2011-title38.pdf</a></p></td>
 <td><p>serviceDisabledVeteranOwned</p></td>
 <td><p>true or false</p></td>
 </tr>
@@ -357,18 +357,18 @@ The results will be defaulted to 10 records per JSON page. An API developer can 
 <pre>
 "links":[
   {"rel": "self",
-   "href":"http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=11&length=10"},
+   "href":"http://api.data.gov/sam/v1/registrations?qterms=gsa&start=11&length=10"},
   {"rel": "prev",
-   "href": "http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
+   "href": "http://api.data.gov/sam/v1/registrations?qterms=gsa&start=1&length=10"},
   {"rel": "first",
-   "href": "http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=10"},
+   "href": "http://api.data.gov/sam/v1/registrations?qterms=gsa&start=1&length=10"},
   {"rel": "next",
-   "href": "http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=21&length=10"}
+   "href": "http://api.data.gov/sam/v1/registrations?qterms=gsa&start=21&length=10"}
 </pre>
 
 An API developer can change the first record of the page and the number of records returned on the page by manipulating the start and length parameters at the end of the API search URL like so:
 
-* [http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25](http://api.data.gov/samsearch/v1/registrations?qterms=gsa&start=1&length=25)  
+* [http://api.data.gov/sam/v1/registrations?qterms=gsa&start=1&length=25](http://api.data.gov/sam/v1/registrations?qterms=gsa&start=1&length=25)  
 * 
 
 Note: The maximium page size is 500. If more than 500 entities are requested, the API will only return 500 per page without error.
@@ -377,16 +377,16 @@ Note: The maximium page size is 500. If more than 500 entities are requested, th
 
 Plus signs '+’ should be used as spaces between terms. ‘+AND+’ and ‘+OR+’ are always used to join two terms like a boolean AND and OR.
 
-* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:University+of+Pongo](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:University+of+Pongo)  
-* [https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO](https://api.data.gov/samsearch/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO)  
-* [https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true](https://api.data.gov/samsearch/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true)  
+* [https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:University+of+Pongo](https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:University+of+Pongo&api_key=DEMO_KEY)  
+* [https://api.data.gov/sam/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO](https://api.data.gov/sam/v1/registrations?qterms=disasterResponse:true+AND+samAddress.stateOrProvince:CO&api_key=DEMO_KEY)  
+* [https://api.data.gov/sam/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true](https://api.data.gov/sam/v1/registrations?qterms=naicsAnySize:111411+AND+samAddress.stateOrProvince:XY+AND+legalBusinessName:Test+AND+minorityOwned:true&api_key=DEMO_KEY)  
 
 Note: If your search term contains the word(s) ‘and’ or ‘or’, you must not capitalize it.
 
 Example:
 
-* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company)  
-* [https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals](https://api.data.gov/samsearch/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals)  
+* [https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company](https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:Snow or Sleet Removal Company&api_key=DEMO_KEY)  
+* [https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals](https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:Rain or Shine Rentals&api_key=DEMO_KEY)  
 
 ##### Grouping Search Terms
 
@@ -394,21 +394,21 @@ Terms can be grouped against the same API advanced search field by using commas 
 
 Examples:
 
-* [https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333)](https://api.data.gov/samsearch/v1/registrations?qterms=samAddress.zip:(11111,22222,33333))  
-* [https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06)](https://api.data.gov/samsearch/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06))  
-* [https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331)](https://test.sam.gov/samsearch/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331))  
+* [https://api.data.gov/sam/v1/registrations?qterms=samAddress.zip:(11111,22222,33333)](https://api.data.gov/sam/v1/registrations?qterms=samAddress.zip:(11111,22222,33333)&api_key=DEMO_KEY)  
+* [https://api.data.gov/sam/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06)](https://api.data.gov/sam/v1/registrations?qterms=congressionalDistrict:(AK-00,AS-98,AZ-06)&api_key=DEMO_KEY)  
+* [https://api.data.gov/sam/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331)](https://api.data.gov/sam/v1/registrations?qterms=womanOwned:true+AND+naicsLimitedSB:(111333,111991,111331)&api_key=DEMO_KEY)  
 
 Note: For terms having the first character as alpha, you must insert a + symbol after each comma (exception is samAddress.country).
 
 Examples:
 
-* [https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:(wood,+moore,+general,+temme,+whitney)]()
-* [https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.city:(Moscow,+Oslo,+Geneva)]()
-* [https://test.sam.gov/samsearch/v1/registrations?qterms=naicsAnySize:(111332,336413)+AND+samAddress.city:(Napa,+Loire)]()
+* [https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:(wood,+moore,+general,+temme,+whitney)&api_key=DEMO_KEY]()
+* [https://api.data.gov/sam/v1/registrations?qterms=samAddress.city:(Moscow,+Oslo,+Geneva)&api_key=DEMO_KEY]()
+* [https://api.data.gov/sam/v1/registrations?qterms=naicsAnySize:(111332,336413)+AND+samAddress.city:(Napa,+Loire)&api_key=DEMO_KEY]()
 
 Exception: 
   
-* [https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)](https://test.sam.gov/samsearch/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL))
+* [https://api.data.gov/sam/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)&api_key=DEMO_KEY](https://api.data.gov/sam/v1/registrations?qterms=samAddress.country:(ALB,BLZ,CHL)&api_key=DEMO_KEY)
 
 
 ##### TIPS/HINTS
@@ -437,4 +437,4 @@ true+AND+disasterResponse:true+AND+legalBusinessName:cats
 
 Example:
 
-* [https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ](https://test.sam.gov/samsearch/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ)
+* [https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ&api_key=DEMO_KEY](https://api.data.gov/sam/v1/registrations?qterms=legalBusinessName:technology+OR+samAddress.country:XYZ&api_key=DEMO_KEY)
