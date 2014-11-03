@@ -21,7 +21,7 @@ Note:  Don’t try to construct links yourself based on the patterns you see in 
 
 The Quick Search functionality allows a user to enter a single term which is then queried against six fields in the SAM database. The results should return the same entities, grantees, and other registrants in SAM that are found when you do a “Quick Search” on SAM itself.
 
-Example: ```https://api.data.gov/sam/v1/registrations?qterms=GSA&api_key=YOUR_KEY```
+Example: [https://api.data.gov/sam/v1/registrations?qterms=GSA&api_key=DEMO_KEY](https://api.data.gov/sam/v1/registrations?qterms=GSA&api_key=DEMO_KEY)
 The Search API will then query the SAM database and display any registrant that matches the user selected search term contained in any of the following fields: 
 
 
