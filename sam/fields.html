@@ -6,7 +6,9 @@ nav: fields
 
 <h3>Field reference for public SAM data</h3>
 
-<p>The fields listed here match up to the SAM data as defined in the public data extract available on <a href="http://www.sam.gov">SAM</a> (go to the Data Access link on SAM to find more information).</p>
+<p>The fields listed here match up to the SAM data as defined in the public data extract available on <a href="http://www.sam.gov">SAM</a>. The documentation for the extract is available on the openIAE site <a href="https://github.com/GSA/IAE-Architecture/blob/master/as-is/tech-docs/SAM/SAMWebServicesExtractsMappingsv1.0/SAM%20Master%20Web%20Services%20Mapping%20v1.0%20Public.xlsx">here</a>.
+There are a few fields like the NAICS code which have been broken out into objects or arrays. The documentation will be updated to provide more information about how to expect those codes to be sent to the user, but most of the fields are one-to-one mapped from the public extract file.
+</p>
 
 <p>We are working on improving access to the information on SAM. If you are directly integrating with SAM and need information about this or other interfaces into SAM, you can go to <a href="https://interact.gsa.gov">Interact</a>, sign up, and then contact the your Change Control Board member to get access to the SAM Interfaces and Extracts Working Group forum.
 
@@ -50,11 +52,15 @@ An address is represented by a JSON object with a structure as follows:
   "stateOrProvince": "DC",
   "zip": "20504",
   "zip4": "0000",
-  "countryCode": "US"
+  "countryCode": "USA"
 }
 </pre>
 
-Note that <code>city</code> and <code>zip4</code> are optional. The <code>countryCode</code> is a 2-digit ISO-3166-1 alpha-2 code.
+<p>
+Note that <code>city</code> and <code>zip4</code> are optional. 
+
+<p>
+The <code>countryCode</code> is a 3-digit code based on the GENC standard which is derived from ISO-3166-1 alpha-3 code. In March, the SAM API will also include West Bank, Gaza Strip and Kosovo in the country codes.
 
 <a name="pocObject"></a>
 <h5>Point of Contact Object</h5>

@@ -8,7 +8,7 @@ nav: basics
 
 The SAM API is a GET API which has one operation. The operation will retrieve an entity's public information. Its endpoint is ```https://api.data.gov/sam/v1/registrations/```. 
 
-A couple basic notes: the rate limits for the API are currently 5,000 calls/day and 5 calls per 5 seconds. As we go forward and understand the impact of usage of the API on SAM, we will adjust the limits accordingly as well as allow for individual users with specific needs to have customized rate limits appropriate to their use.
+A couple basic notes: the rate limits for the API are currently 5,000 calls per 24 hours and 5 calls per 5 seconds. As we go forward and understand the impact of usage of the API on SAM, we will adjust the limits accordingly as well as allow for individual users with specific needs to have customized rate limits appropriate to their use.
 
 ##### Example URL
 
@@ -27,11 +27,11 @@ The data in the API is updated daily by approximately 2 AM Eastern time for the 
 
 ##### Finding DUNS numbers to use
 
-Until a search API is implemented (which is on its way), the best way to get DUNS numbers is to go to [SAM](http://www.sam.gov), click on ```Search Records``` and enter in a company into the Quick Search box. Each entity has a DUNS number that you'll see in the result set. You'll see a 9-digit number which represents the DUNS. You can then pad it out with four ```0```s as mentioned above.
+In addition to the [search API](http://gsa.github.io/sam_api/sam/search.html), another way to get DUNS numbers is to go to [SAM](http://www.sam.gov), click on ```Search Records``` and enter in a company into the Quick Search box. Each entity has a DUNS number that you'll see in the result set. You'll see a 9-digit number which represents the DUNS. You can then pad it out with four ```0```s as mentioned above.
 
-##### Coming soon! 
+##### Search API
 
-This is just the first of many steps in modernizing SAM and IAE. In fall 2014, SAM API consumers will be able to use the API to search the SAM database and retrieve registration information specific to their needs. This means, most of the functionality you see on SAM right now to search for entities will be available as an API. 
+These are just the first of many steps in modernizing SAM and IAE. In fall 2014, the SAM API consumers added an API to search the SAM database and retrieve registration information specific to their needs. This means, most of the functionality you see on SAM right now to search for entities is available as an API. 
 
 <body id="basics"></body>
 

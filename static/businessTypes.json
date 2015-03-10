@@ -1,111 +1,95 @@
 [
   {
-    "businessTypeCode":"A7",
-    "businessTypeName":"AbilityOne Non Profit Agency"
-  },
-  {
-    "businessTypeCode":"2R",
-    "businessTypeName":"U.S Federal Government"
-  },
-  {
-    "businessTypeCode":"2F",
-    "businessTypeName":"U.S. State Government"
+    "businessTypeCode":"05",
+    "businessTypeName":"Alaskan Native Corporation Owned Firm"
   },
   {
     "businessTypeCode":"12",
     "businessTypeName":"U.S. Local Government"
   },
   {
-    "businessTypeCode":"3I",
-    "businessTypeName":"Tribal Government"
+    "businessTypeCode":"1A",
+    "businessTypeName":"Minority Institution"
   },
   {
-    "businessTypeCode":"20",
-    "businessTypeName":"Foreign Owned and Located"
+    "businessTypeCode":"1B",
+    "businessTypeName":"Tribally Owned Firm"
   },
   {
     "businessTypeCode":"1D",
     "businessTypeName":"Small Agricultural Cooperative"
   },
   {
-    "businessTypeCode":"LJ",
-    "businessTypeName":"Limited Liability Company"
+    "businessTypeCode":"1R",
+    "businessTypeName":"Private University or College"
   },
   {
-    "businessTypeCode":"XS",
-    "businessTypeName":"Subchapter S Corporation"
-  },
-  {
-    "businessTypeCode":"MF",
-    "businessTypeName":"Manufacturer of Goods"
-  },
-  {
-    "businessTypeCode":"2X",
-    "businessTypeName":"For Profit Organization"
-  },
-  {
-    "businessTypeCode":"A8",
-    "businessTypeName":"Non-Profit Organization"
-  },
-  {
-    "businessTypeCode":"2U",
-    "businessTypeName":"Other Not For Profit Organization"
-  },
-  {
-    "businessTypeCode":"HK",
-    "businessTypeName":"Community Development Corporation Owned Firm"
-  },
-  {
-    "businessTypeCode":"A3",
-    "businessTypeName":"Labor Surplus Area Firm"
-  },
-  {
-    "businessTypeCode":"A5",
-    "businessTypeName":"Veteran Owned Business"
-  },
-  {
-    "businessTypeCode":"QF",
-    "businessTypeName":"Service Disabled Veteran Owned Business"
-  },
-  {
-    "businessTypeCode":"A2",
-    "businessTypeName":"Woman Owned Business"
+    "businessTypeCode":"20",
+    "businessTypeName":"Foreign Owned and Located"
   },
   {
     "businessTypeCode":"23",
     "businessTypeName":"Minority Owned Business"
   },
   {
-    "businessTypeCode":"FR",
-    "businessTypeName":"Asian-Pacific American Owned"
-  },
-  {
-    "businessTypeCode":"QZ",
-    "businessTypeName":"Subcontinent Asian (Asian-Indian) American Owned"
-  },
-  {
-    "businessTypeCode":"OY",
-    "businessTypeName":"Black American Owned"
-  },
-  {
-    "businessTypeCode":"PI",
-    "businessTypeName":"Hispanic American Owned"
-  },
-  {
-    "businessTypeCode":"NB",
-    "businessTypeName":"Native American Owned"
-  },
-  {
-    "businessTypeCode":"8W",
-    "businessTypeName":"Woman Owned Small Business"
-  },
-  {
     "businessTypeCode":"27",
     "businessTypeName":"Self Certified Small Disadvantaged Business"
   },
   {
-    "businessTypeCode":"8E",
-    "businessTypeName":"Economically Disadvantaged Women Small Owned Business"
+    "businessTypeCode":"2A",
+    "businessTypeName":"U.S. Government Entity"
+  },
+  {
+    "businessTypeCode":"2F",
+    "businessTypeName":"U.S. State Government"
+  },
+  {
+    "businessTypeCode":"2J",
+    "businessTypeName":"Sole Proprietorship "
+  },
+  {
+    "businessTypeCode":"2K",
+    "businessTypeName":"Partnership or Limited Liability Partnership"
+  },
+  {
+    "businessTypeCode":"2L",
+    "businessTypeName":"Corporate Entity (Not Tax Exempt)"
+  },
+  {
+    "businessTypeCode":"2R",
+    "businessTypeName":"U.S Federal Government"
+  },
+  {
+    "businessTypeCode":"2R",
+    "businessTypeName":"US Federal Government"
+  },
+  {
+    "businessTypeCode":"2U",
+    "businessTypeName":"Other Not For Profit Organization"
+  },
+  {
+    "businessTypeCode":"2X",
+    "businessTypeName":"For Profit Organization"
+  },
+  {
+    "businessTypeCode":"3I",
+    "businessTypeName":"Tribal Government"
+  },
+  {
+    "businessTypeCode":"6D",
+    "businessTypeName":"Domestic Shelter"
+  },
+  {
+    "businessTypeCode":"80",
+    "businessTypeName":"Hospital"
+  },
+  {
+    "businessTypeCode":"86",
+    "businessTypeName":"Interstate Entity"
+  },
+  {
+    "businessTypeCode":"8B",
+    "businessTypeName":"Housing Authorities Public/Tribal"
   },
   {
     "businessTypeCode":"8C",
@@ -116,72 +100,92 @@
     "businessTypeName":"Joint Venture Economically Disadvantaged Women Small Owned Business"
   },
   {
-    "businessTypeCode":"NG",
-    "businessTypeName":"Federal Agency"
+    "businessTypeCode":"8E",
+    "businessTypeName":"Economically Disadvantaged Women Small Owned Business"
   },
   {
-    "businessTypeCode":"QW",
-    "businessTypeName":"Federally Funded Research and Development Corp"
+    "businessTypeCode":"8H",
+    "businessTypeName":"Corporate Entity (Tax Exempt)"
   },
   {
-    "businessTypeCode":"C8",
-    "businessTypeName":"City"
+    "businessTypeCode":"8U",
+    "businessTypeName":"Native Hawaiian Organization Owned Firm"
   },
   {
-    "businessTypeCode":"C7",
-    "businessTypeName":"County"
+    "businessTypeCode":"8W",
+    "businessTypeName":"Woman Owned Small Business"
   },
   {
-    "businessTypeCode":"ZR",
-    "businessTypeName":"Inter-municipal"
+    "businessTypeCode":"A2",
+    "businessTypeName":"Woman Owned Business"
   },
   {
-    "businessTypeCode":"MG",
-    "businessTypeName":"Local Government Owned"
+    "businessTypeCode":"A3",
+    "businessTypeName":"Labor Surplus Area Firm"
+  },
+  {
+    "businessTypeCode":"A4",
+    "businessTypeName":"SBA Certified Small Disadvantaged Business "
+  },
+  {
+    "businessTypeCode":"A5",
+    "businessTypeName":"Veteran Owned Business"
+  },
+  {
+    "businessTypeCode":"A6",
+    "businessTypeName":"SBA Certified 8(a) Program Participant "
+  },
+  {
+    "businessTypeCode":"A7",
+    "businessTypeName":"AbilityOne Non Profit Agency"
+  },
+  {
+    "businessTypeCode":"A8",
+    "businessTypeName":"Non-Profit Organization"
+  },
+  {
+    "businessTypeCode":"BZ",
+    "businessTypeName":"Foundation"
   },
   {
     "businessTypeCode":"C6",
     "businessTypeName":"Municipality"
   },
   {
-    "businessTypeCode":"H6",
-    "businessTypeName":"School District"
+    "businessTypeCode":"C7",
+    "businessTypeName":"County"
   },
   {
-    "businessTypeCode":"TW",
-    "businessTypeName":"Transit Authority"
+    "businessTypeCode":"C8",
+    "businessTypeName":"City"
   },
   {
-    "businessTypeCode":"UD",
-    "businessTypeName":"Council of Governments"
+    "businessTypeCode":"CY",
+    "businessTypeName":"Country - Foreign Government"
   },
   {
-    "businessTypeCode":"8B",
-    "businessTypeName":"Housing Authorities Public/Tribal"
+    "businessTypeCode":"F",
+    "businessTypeName":"Business or Organization"
   },
   {
-    "businessTypeCode":"86",
-    "businessTypeName":"Interstate Entity"
+    "businessTypeCode":"FO",
+    "businessTypeName":"Township"
   },
   {
-    "businessTypeCode":"KM",
-    "businessTypeName":"Planning Commission"
+    "businessTypeCode":"FR",
+    "businessTypeName":"Asian-Pacific American Owned"
   },
   {
-    "businessTypeCode":"T4",
-    "businessTypeName":"Port Authority"
+    "businessTypeCode":"FY",
+    "businessTypeName":"Veterinary Hospital"
   },
   {
-    "businessTypeCode":"H2",
-    "businessTypeName":"Community Development Corporation"
+    "businessTypeCode":"G3",
+    "businessTypeName":"Alaskan Native Servicing Institution"
   },
   {
-    "businessTypeCode":"6D",
-    "businessTypeName":"Domestic Shelter"
-  },
-  {
-    "businessTypeCode":"M8",
-    "businessTypeName":"Educational Institution"
+    "businessTypeCode":"G5",
+    "businessTypeName":"Native Hawaiian Servicing Institution"
   },
   {
     "businessTypeCode":"G6",
@@ -196,99 +200,175 @@
     "businessTypeName":"1994 Land Grant College"
   },
   {
-    "businessTypeCode":"HB",
-    "businessTypeName":"Historically Black College or University"
-  },
-  {
-    "businessTypeCode":"1A",
-    "businessTypeName":"Minority Institution"
-  },
-  {
-    "businessTypeCode":"1R",
-    "businessTypeName":"Private University or College"
-  },
-  {
-    "businessTypeCode":"ZW",
-    "businessTypeName":"School of Forestry"
+    "businessTypeCode":"G9",
+    "businessTypeName":"Other Than One of the Proceeding"
   },
   {
     "businessTypeCode":"GW",
     "businessTypeName":"Hispanic Servicing Institution"
   },
   {
-    "businessTypeCode":"OH",
-    "businessTypeName":"State Controlled Institution of Higher Learning"
+    "businessTypeCode":"H2",
+    "businessTypeName":"Community Development Corporation "
   },
   {
-    "businessTypeCode":"HS",
-    "businessTypeName":"Tribal College"
+    "businessTypeCode":"H6",
+    "businessTypeName":"School District"
   },
   {
-    "businessTypeCode":"QU",
-    "businessTypeName":"Veterinary College"
+    "businessTypeCode":"HB",
+    "businessTypeName":"Historically Black College or University"
   },
   {
-    "businessTypeCode":"G3",
-    "businessTypeName":"Alaskan Native Servicing Institution"
-  },
-  {
-    "businessTypeCode":"G5",
-    "businessTypeName":"Native Hawaiian Servicing Institution"
-  },
-  {
-    "businessTypeCode":"BZ",
-    "businessTypeName":"Foundation"
-  },
-  {
-    "businessTypeCode":"80",
-    "businessTypeName":"Hospital"
-  },
-  {
-    "businessTypeCode":"FY",
-    "businessTypeName":"Veterinary Hospital"
+    "businessTypeCode":"HK",
+    "businessTypeName":"Community Development Corporation Owned Firm"
   },
   {
     "businessTypeCode":"HQ",
     "businessTypeName":"DOT Certified DBE"
   },
   {
-    "businessTypeCode":"05",
-    "businessTypeName":"Alaskan Native Corporation Owned Firm"
+    "businessTypeCode":"HS",
+    "businessTypeName":"Tribal College"
+  },
+  {
+    "businessTypeCode":"JT",
+    "businessTypeName":"SBA Certified 8(a) Joint Venture"
+  },
+  {
+    "businessTypeCode":"KM",
+    "businessTypeName":"Planning Commission"
+  },
+  {
+    "businessTypeCode":"LJ",
+    "businessTypeName":"Limited Liability Company"
+  },
+  {
+    "businessTypeCode":"M8",
+    "businessTypeName":"Educational Institution"
+  },
+  {
+    "businessTypeCode":"MF",
+    "businessTypeName":"Manufacturer of Goods"
+  },
+  {
+    "businessTypeCode":"MG",
+    "businessTypeName":"Local Government Owned"
+  },
+  {
+    "businessTypeCode":"NB",
+    "businessTypeName":"Native American Owned"
+  },
+  {
+    "businessTypeCode":"NG",
+    "businessTypeName":"Federal Agency"
+  },
+  {
+    "businessTypeCode":"OH",
+    "businessTypeName":"State Controlled Institution of Higher Learning"
   },
   {
     "businessTypeCode":"OW",
     "businessTypeName":"American Indian Owned"
   },
   {
-    "businessTypeCode":"XY",
-    "businessTypeName":"Indian Tribe (Federally Recognized)"
+    "businessTypeCode":"OY",
+    "businessTypeName":"Black American Owned"
   },
   {
-    "businessTypeCode":"8U",
-    "businessTypeName":"Native Hawaiian Organization Owned Firm"
+    "businessTypeCode":"PI",
+    "businessTypeName":"Hispanic American Owned"
   },
   {
-    "businessTypeCode":"1B",
-    "businessTypeName":"Tribally Owned Firm"
+    "businessTypeCode":"QF",
+    "businessTypeName":"Service Disabled Veteran Owned Business"
   },
   {
-    "businessTypeCode":"FO",
-    "businessTypeName":"Township"
+    "businessTypeCode":"QU",
+    "businessTypeName":"Veterinary College"
+  },
+  {
+    "businessTypeCode":"QW",
+    "businessTypeName":"Federally Funded Research and Development Corp"
+  },
+  {
+    "businessTypeCode":"QZ",
+    "businessTypeName":"Subcontinent Asian (Asian-Indian) American Owned"
+  },
+  {
+    "businessTypeCode":"S4",
+    "businessTypeName":"Buyer"
+  },
+  {
+    "businessTypeCode":"S5",
+    "businessTypeName":"Seller"
+  },
+  {
+    "businessTypeCode":"S6",
+    "businessTypeName":"Buyer & Seller"
+  },
+  {
+    "businessTypeCode":"T4",
+    "businessTypeName":"Port Authority"
   },
   {
     "businessTypeCode":"TR",
     "businessTypeName":"Airport Authority"
   },
   {
-    "businessTypeCode":"V2",
-    "businessTypeName":"Grants"
+    "businessTypeCode":"TW",
+    "businessTypeName":"Transit Authority"
   },
   {
-    "businessTypeCode":"VW",
-    "businessTypeName":"Contracts and Grants"
+    "businessTypeCode":"UD",
+    "businessTypeName":"Council of Governments"
   },
   {
-    "businessTypeCode":"G9",
-    "businessTypeName":"Other Than One of the Proceeding"
+    "businessTypeCode":"X6",
+    "businessTypeName":"International Organization"
+  },
+  {
+    "businessTypeCode":"XS",
+    "businessTypeName":"Subchapter S Corporation"
+  },
+  {
+    "businessTypeCode":"XX",
+    "businessTypeName":"SBA Certified Hub Zone Firm "
+  },
+  {
+    "businessTypeCode":"XY",
+    "businessTypeName":"Indian Tribe (Federally Recognized)"
+  },
+  {
+    "businessTypeCode":"Z1",
+    "businessTypeName":"Federal Assistance Awards"
+  },
+  {
+    "businessTypeCode":"Z2",
+    "businessTypeName":"All Awards"
+  },
+  {
+    "businessTypeCode":"Z3",
+    "businessTypeName":"IGT Only"
+  },
+  {
+    "businessTypeCode":"Z4",
+    "businessTypeName":"Assistance Awards & IGT"
+  },
+  {
+    "businessTypeCode":"Z5",
+    "businessTypeName":"All Awards and IGT"
+  },
+  {
+    "businessTypeCode":"ZR",
+    "businessTypeName":"Inter-municipal"
+  },
+  {
+    "businessTypeCode":"ZW",
+    "businessTypeName":"School of Forestry"
+  },
+  {
+    "businessTypeCode":"ZZ",
+    "businessTypeName":"Other"
   }
 ]
