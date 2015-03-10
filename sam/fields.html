@@ -52,11 +52,15 @@ An address is represented by a JSON object with a structure as follows:
   "stateOrProvince": "DC",
   "zip": "20504",
   "zip4": "0000",
-  "countryCode": "US"
+  "countryCode": "USA"
 }
 </pre>
 
-Note that <code>city</code> and <code>zip4</code> are optional. The <code>countryCode</code> is a 2-digit ISO-3166-1 alpha-2 code.
+<p>
+Note that <code>city</code> and <code>zip4</code> are optional. 
+
+<p>
+The <code>countryCode</code> is a 3-digit code based on the GENC standard which is derived from ISO-3166-1 alpha-3 code. In March, the SAM API will also include West Bank, Gaza Strip and Kosovo in the country codes.
 
 <a name="pocObject"></a>
 <h5>Point of Contact Object</h5>
